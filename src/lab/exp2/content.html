@@ -1,0 +1,688 @@
+<!-- This file needs to be edited by the lab developer to suit the requirements of their lab in particular.-->
+<!-- Add class="default" to include any element as it is specified in default.html. Do not include class="default" to the elements that you want to edit -->
+<!DOCTYPE html>
+<html>
+<head>
+<title> Fluid Machinery Lab - SOLVE @ NITK Surathkal
+</title>
+</head>
+
+<body>
+   <div id="experiment">
+        <!-- The Experiment Document Container-->
+        <!-- The lab Header contains the logo and the name of the lab,  usually displayed on the top of the page-->
+        <header class="default" id="experiment-header">
+            <div class="logo" id="experiment-header-logo">
+            <!-- Enclose the logo image of your lab or write it in text-->
+            <img src="../images/logo.jpg">
+</div>
+
+            <div class="heading" id="experiment-header-heading">
+                <!-- Write the name of your lab and link it to the home page of your lab (h1 tag is preferred while writing your lab name)-->
+                <a href="../index.html">Fluid Machinery Lab</a>
+            </div>
+<!-- Add any additional element you want to add to the lab header, For example : Help (Enclosing them with suitable div is recommended)-->
+        </header>
+<!-- The lab article is the main content area where all the 
+  experiment content sits-->
+
+        <article id="experiment-article">
+            <!-- The lab article has an header, optional navigational 
+    menu, number of sections, an optional sidebar and a closing 
+    footer-->
+
+            <div class="breadcrumb" id="experiment-article-breadcrumb"></div>
+
+            <header class="heading" id="experiment-article-heading">
+Francis Turbine - Constant Speed
+            </header>
+<!-- Navigation menu is useful to organize the view of multiple sections inside the article-->
+
+            <nav class="default" id="experiment-article-navigation">
+                <ul id="experiment-article-navigation-menu">
+                    <!-- The menu can be dynamically generated to contain 
+          the headings of your sections or instead write the 
+          menu items of your choice individually enclosedu in 
+          &lt;li&gt; tag as shown below-->
+                </ul>
+            </nav>
+<!-- All the sections of your lab or experiment can be enclosed together with a div element as shown below-->
+
+			
+            <div id="experiment-article-sections">
+			
+                <!-- First section of the article-->
+<section id="experiment-article-section-1">
+                <div class="icon" id="experiment-article-section-1-icon">
+                <!-- Enclose the icon image of your lab. -->
+                <img src="../images/theory.jpg"></div>
+
+                <div class="heading" id="experiment-article-section-1-heading">
+					Theory
+                </div>
+
+            <div class="content" id="experiment-article-section-1-content">
+            <div class="divContent"  id="wrap">
+					
+					<!-- Theory Content-->
+					
+				<p style="text-indent: 50px;">The Francis turbine is a reaction turbine, in which the fluid changes pressure as it moves through the turbine, giving up its energy. The turbine is located between the high pressure water source and the low pressure water exit. </p>
+				<p style="text-indent: 50px;">The inlet of turbine is in spiral shape. The guide vanes direct the water tangentially to the turbine wheel which is known as a runner. This radial flow of water acts on the runner's vanes, causing the runner to spin. The guide vanes may be adjustable to allow efficient turbine operation for a range of water flow conditions.</p>
+				<p style="text-indent: 50px;">At the point of exit, the water leaves with no swirl and very little kinetic or potential energy. The shape of the turbine's exit tube helps to decelerate the flow of water and recover the pressure. </p>
+
+				<center><img src="../images/Francis_1.png"></img></center></br>
+
+				<p><b>Main parts:</b></p> </br>
+				<ol><li><b>Spiral casing:</b> The runner is completely enclosed in an air-tight spiral casing. The casing and runner are always full of water. The water from the penstocks enters the casing in which area of cross-section of the casing goes on decreasing gradually. Since the casing is spiral shape, the water enters the runner at constant velocity throughout the circumference of the runner. </li></br>
+				<li><b>Guide vanes:</b> The guide vanes allow the water to strike the vanes fixed on the runner without any shake at the inlet. Also by a suitable arrangement, the width between two adjacent vanes of a guide’s mechanism can be adjusted, so that the amount of water striking the runner can be varied. </li></br>
+				<li><b>Runner/Impeller:</b> It is a circular wheel on which a series of radial curved vanes are fixed and the surface of the vanes is made very smooth. The radial curved vanes are so shaped that the water enters and leaves the runner without shock. The runners are made of cast steel, cast iron or stainless steel. The runner is connected to the shaft. </li></br>
+				<li><b>Draft tube:</b> Draft tube is or pipe of gradually increasing area which is used for discharging the water from the turbine to the tail race. The pressure at the exit of the runner is generally less than atmosphere pressure. Hence the water is discharged to tail race through the draft tube.
+				</li></br> 
+				</ol>
+				<p><center><img src="../images/Francis_2.png"style="width:400px; height:438px;"></img></center></p> </br>
+
+				<p>Let, </br>R<sub>1</sub> = Radius of wheel at inlet of the vane</p>
+				<p>R<sub>2</sub> = Radius of wheel at outlet of the vane
+				<p>&omega; = Angular speed of the wheel</p>
+				<p>Tangential speed of the vane at inlet = u<sub>1</sub> = &omega;R<sub>1</sub></p>
+				
+				<p>Tangential speed of the vane at outlet = u<sub>2</sub> = &omega; R<sub>2</sub></p></br>
+				<p>The velocity triangles at inlet and outlet are drawn as shown in figure.</p> 
+				<p>&alpha; and &beta; are the angles between the absolute velocities of jet and vane at inlet and outlet respectively.
+				&theta; and &phi; are vane angles at inlet and outlet respectively. </p></br>
+				
+				<p>The mass of water striking a series of vanes per second = &rho; aV<sub>1</sub></p>
+				<p>where, a is the area of jet or flow and V<sub>1</sub> is the velocity of flow at inlet.</p></br>
+				
+				<p style="text-indent: 50px;">The momentum of water striking a series of vanes per second at inlet is given by the product of mass of water striking per second and the
+				component of velocity of flow at inlet= &rho; aV<sub>1</sub> x V<sub>w1</sub>,
+				where V<sub>w1</sub>  is the velocity component of flow at inlet along tangential direction. 
+				</p></br>
+				
+				<p style="text-indent: 50px;">Similarly momentum of water striking a series of vanes per second at outlet is given by </br> <span>&rho; aV<sub>1</sub> x (-V<sub>w1</sub>)</span>,        where (-V<sub>w1</sub>)  is the velocity component of flow at inlet along tangential direction and the -ve sign is because the velocity component is acting in the opposite direction. </p></br>
+				<p style="text-indent: 50px;">Now angular momentum per second at inlet is given by the product of momentum of water at inlet and its radial distance = &rho; aV<sub>1</sub> x V<sub>w1</sub>  x R<sub>1</sub></p>
+				<p>and angular momentum per second at inlet = -&rho; aV<sub>1</sub> x V<sub>w2</sub>  xR<sub>2</sub> </p></br>
+				
+				<p>Torque exerted by water on the wheel is given by impulse momentum theorem as the rate of change of angular momentum</p></br>
+				
+				<p>T = &rho;aV<sub>1</sub> x V<sub>w1</sub>  x R<sub>1</sub> - (-&rho;aV<sub>1</sub> x V<sub>w2</sub> x R<sub>2</sub>) </p></br>
+				<p>T = &rho;a V<sub>1</sub> (V<sub>w1</sub>  R<sub>1</sub>+ V<sub>w2</sub> R<sub>2</sub>) </p></br>
+				
+				<p>Work done per second on the wheel = Torque x Angular velocity</p>                                                                                                                                       <pre>                                = T x &omega;</pre>
+				<pre>=&rho;aV<sub>1</sub> (V<sub>w1</sub>  R<sub>1</sub>+ V<sub>w2</sub> R<sub>2</sub>) x &omega;</pre>
+				<pre>=&rho;aV<sub>1</sub> (V<sub>w1</sub>  R<sub>1</sub> x &omega; + V<sub>w2</sub> R<sub>2</sub> x &omega;) </pre></br>
+				<p>As u<sub>1</sub> = &omega; R<sub>1</sub> and u<sub>2</sub> = &omega; R<sub>2</sub>, </p>
+				<p>We can simplify the above equation as</p>
+				
+				<p>W.D/s = &rho; aV<sub>1</sub> (V<sub>w1</sub> u<sub>1</sub>+ V<sub>w2</sub> u<sub>2</sub>) </p>
+				<p>In the above case, always the velocity of whirl at outlet is given by both magnitude and direction 
+				as V<sub>w2</sub> = (V<sub>r2</sub> Cos&phi; -u<sub>2</sub> ) </p></br>
+				
+				<p>If the discharge is radial at outlet, then V<sub>w2</sub> = 0 and </p>
+				
+				<p>Hence the equation reduces to, </p>
+				<p>WD/s = &rho; a u<sub>1</sub>V<sub>1</sub> V<sub>w1</sub> </p>
+				<p>KE/s = ½ &rho; aV<sub>1</sub><sup>3</sup></p>
+				<p>	
+				<p>Efficiency of the reaction turbine is given by,</p></br>
+					<img src="../images/Francis_3.png" style =" width:460px; height:52px;"></img>
+				</p></br>
+
+
+				<p>Note: The value of the velocity of whirl at outlet is to be substituted as V<sub>w2</sub> = (V<sub>r2</sub> Cos &phi; -u<sub>2</sub>) 
+				along with its sign. </p></br>
+
+				<img src="../images/Francis_4.png" style =" width:150px; height:53px;"></img>
+				
+				<div>
+				<span>Speed ratio</span>
+				<img src="../images/Francis_5.png" style =" width:70px; height:56px;vertical-align:middle"> </img> 
+				</div>
+				<p>where H is the Head on turbine, it varies from 0.6 to 0.9.</p> </br>          
+				
+				<div>
+					<span>Flow ratio</span>
+					<img src="../images/Francis_6.png" style =" width:70px; height:56px;vertical-align:middle"></img>
+				</div>
+				</br>
+				
+				<p>where V<sub>f1</sub>  is the velocity of flow at inlet, it varies from 0.15 to 0.3. </p></br>
+
+				<p>Discharge flowing through the reaction turbine is given by
+				Q =&pi; D<sub>1</sub>B<sub>1</sub>V<sub>f1</sub>  = &pi; D<sub>2</sub>B<sub>2</sub>V<sub>f2</sub></p>
+				<p>Where, D<sub>1</sub> and D<sub>2</sub> are the diameter of the runner at inlet and outlet.B<sub>1</sub> and B<sub>2</sub> are the width of the runner at inlet and outlet. V<sub>f1</sub>  and V<sub>f2</sub> velocity at inlet and outlet. If the thickness (t) of the vane is to be considered, then the area through which flow takes place is given by</p>
+				
+				<p>= (&pi;D<sub>1</sub>-nt) where n is the number of vanes mounted on the runner.
+				Discharge flowing through the reaction turbine is given by</p>
+				<p>Q= (&pi;D<sub>1</sub>-nt) B<sub>1</sub>V<sub>f1</sub> = (&pi;D<sub>2</sub>-nt) B<sub>2</sub>V<sub>f2</sub></p></br>
+				
+				<div>
+				<span>The head(H) on the turbine is given by=</span>
+
+				<img src="../images/Francis_7.png"style =" width:80px; height:48px;vertical-align:middle"></br></br>
+				<div>
+				<div>
+				<img src="../images/Francis_8.png"style =" width:80px; height:39px;vertical-align:middle"> <span>and</span> 
+				<img src="../images/Francis_9.png"style =" width:90px; height:46px;vertical-align:middle">
+				</div>
+				
+				</br>
+				<div>
+				<span>Hydraulic efficiency is</span><img src="../images/Francis_10.png"style =" width:400px; height:47px;vertical-align:middle">
+				</div></br>
+				
+				<p>If the discharge at the exit is radial then V<sub>w2</sub>=0, 
+				<div></br>
+				<span>Hence hydraulic efficiency is</span> <img src="../images/Francis_11.png" style =" width:90px; height:44px;vertical-align:middle"></div></br>
+				<p><b>Comparison of Francis turbine and Kaplan turbine</b></p></br>
+				
+				<table style="width:800px;margin-left: 0;">
+
+				  <tr>
+					<th></th>	
+					<th>Francis turbine</th>
+					<th>Kaplan turbine</th>
+				  </tr>
+				  <tr>
+					<td>1</td>
+					<td><br>  Normal range of head:30-550m<br>  </td>
+					<td><br>  Normal range of head:1.5-80m<br>  </td>
+				  </tr>
+				  <tr>
+					<td>2</td>
+					<td><br>  Number of vanes:15-25<br>  </td>
+					<td><br>  Number of vanes:3-8<br>  </td>
+				  </tr>
+				  <tr>
+					<td>3</td>
+					<td><br>  Specific speed:50-250 60-400<br>  </td>
+					<td><br>  Specific speed:300-1000<br>  </td>
+				  </tr>
+				  <tr>
+					<td>4</td>
+					<td><br>  Cavitation susceptibility<br>  </td>
+					<td><br>  Greater cavitation susceptibility<br>  </td>
+				  </tr>
+				  <tr>
+					<td>5</td>
+					<td><br>  Overall efficiency is good<br>  </td>
+					<td><br>  Overall efficiency is better than Francis<br>  turbine<br>  </td>
+				  </tr>
+				  <tr>
+					<td>6</td>
+					<td><br>  Requires large area</td>
+					<td><br>  Requires less area</td>
+				  </tr>
+				  <tr>
+					<td>7</td>
+					<td><br>  Normal speed of runner:90-1000</td>
+					<td><br>  Normal speed of runner:70-600</td>
+				  </tr>
+				  <tr>
+					<td>8</td>
+					<td><br>  Flow of water is radially and mixed flow type</td>
+					<td><br>  Flow of water is axial<br>  </td>
+				  </tr>
+				  <tr>
+					<td>9</td>
+					<td><br>  Flow regulation is by guide vanes<br>  </td>
+					<td><br>  Flow regulation is by needle valve fitted into nozzle</td>
+				  </tr>
+				  <tr>
+					<td>10</td>
+					<td><br>  Turbines works by medium discharge at average head<br>  </td>
+					<td><br>  Turbines works by high discharge low head<br>  </td>
+				  </tr>
+				</table></br>
+				
+				<p><b>Cavitation:</b></p></br>
+				<p style="text-indent: 50px;">Cavitation is an effect mainly on the reaction turbine when water pressure drops below the critical pressure 
+				(generally vapour pressure) at constant temperature and vapour cavities are formed and grow based on the dynamic pressure reduction. Cavitation
+				in hydraulic machines negatively affects their performance and may causes severe damages. Cavitation commonly occurs in hydraulic turbines, 
+				around runner exit and in the draft tube. </p></br>
+				
+				<p style="text-indent: 50px;">Cavitation is a phenomenon occurs when the static pressure of the liquid falls below its vapour pressure, the 
+				liquid boils and large number of small bubbles of vapours are formed. These bubbles mainly formed due to low pressure are and carried by the
+				stream to higher pressure zones where the vapours condense and the bubbles suddenly collapse, as the vapours are condensed to liquid again. 
+				This results in the formation of a cavity and the surrounding liquid rushes to fill it from all direction which collide at the centre of 
+				cavity giving rise to a very high local pressure whose magnitude may be as high as 7000 atm. Formation of cavity and high pressure are 
+				repeated many thousand times a second. This causes pitting on the metallic surface of runner blades or draft tube. The material then fails by 
+				fatigue, added by corrosion. </p></br>
+				
+				<p style="text-indent: 50px;">There are two ways to reduce the cavitation damage.  One involves optimizing the hydraulic design of equipment 
+				and the other involves developing coatings for the substrates of wetted parts, which can prolong the overhaul interval of hydraulic components.
+				</p></br>
+				
+				<p style="text-indent: 50px;">Cavitation  in  general  is  slow process  but  the  effect  of  cavitation  is  severe.  Damaged caused  by  
+				cavitation,  if  summarized  are:  erosion  of material from turbine parts, distortion of blade angle, loss of  efficiency  due  to 
+				erosion/distortion  (Santa  JF  et  al, 2009) .  Prof. D Thoma Suggested a dimensionless number called as Thoma's Cavitation factor &sigma; (sigma),
+				which can be used for determining the region where cavitation takes place in reaction turbines </p></br>
+				
+				<div style="text-align: center;">
+					<img src="../images/Francis_12.png"style =" width:110px; height:42px;vertical-align:middle">   <span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;---&nbsp;&nbsp;&nbsp;&nbsp; (1)</span>
+				</div></br>
+				
+				<p>Where,</br> H<sub>a</sub> is the atmospheric pressure head in m of water</p>
+				<p>H<sub>s</sub> is the suction pressure at outlet of reaction turbine in m of water or height of turbine runner above the tail water surface, 
+				</p></br>
+				<p>H<sub>v</sub> is vapour pressure head, </p></br>
+				<p>H is the net head on the turbine in m of water</p></br>
+				<p>The value of &sigma; depends on N<sub>s</sub> (specific speed) of the turbine and for a turbine of given N<sub>s</sub> the factor &sigma; 
+				can be reduced up-to a certain value up to which its efficiency, &eta;<sub>o</sub> remains constant. A further decrease in value of &sigma; 
+				results in a sharp fall in &eta;<sub>o</sub>. The value of &sigma; at this turning point is called critical cavitation 
+				factor &sigma; <sub>c</sub>. The value of &sigma; for different turbines may be determined with the help of following empirical 
+				relationships: </p>
+				</br>
+				<p>For Francis turbines: </p>
+				
+				<div style="text-align: center;">
+				<img src="../images/Francis_13.png"style =" width:150px; height:54px;vertical-align:middle"> <span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;---&nbsp;&nbsp;&nbsp;&nbsp; (2)</span>
+				</div></br>
+				
+				<p>The values of &sigma from equation (1) is compared with the value of &sigma; <sub>c</sub> from equation (2) and if value of &sigma is greater than &sigma; <sub>c</sub>, cavitation will not occur in that turbine. </p>
+
+				</br>
+				<p><b>Performance characteristics of Francis Turbine: </b></p></br>
+				<p>Performance characteristics are of three types: </p></br>
+				
+				<ol type="a">
+					<li><b>Constant head characteristics:</b>
+						<p>In order to obtain these curves the tests are performed on the turbine by maintaining a constant head and a constant gate opening and the speed 
+					is raised by changing the load on the turbine. </p>
+					</li>
+
+					<img src="../images/Francis_14.png"style =" width:492px; height:361px;">
+					<img src="../images/Francis_15.png"style =" width:490px; height:246px;">
+					<img src="../images/Francis_16.png"style =" width:464px; height:269px;">
+					</br></br>
+					<li><b>Constant speed characteristics:</b>
+						<p>In order to obtain these curves the tests are performed on the turbine by operating them at constant speed. </p> 
+					
+
+						<img src="../images/Francis_17.png"style =" width:406px; height:345px;">
+						<img src="../images/Francis_18.png"style =" width:406px; height:327px;">
+						<img src="../images/Francis_19.png"style =" width:406px; height:365px;">
+
+					</li>
+					</br></br>
+					<li><b>Constant efficiency curves:</b>
+						<p>These curves show the efficiency of the turbine for all conditions of running and hence these are also known as universal 
+						characteristic curves.</p>
+					</li>
+
+					<img src="../images/Francis_20.png"style =" width:534px; height:327px;">
+				</ol>
+				</br></br>
+			</div>  <!-- Theory Content End-->
+
+			</div>
+
+		</section>
+ <section id="experiment-article-section-2">
+    <div class="icon" id="experiment-article-section-2-icon">
+    <!-- Enclose the icon image of your lab.-->
+    <img src="../images/procedure.jpg" style="padding-left: 20px;"></div>
+
+    <div class="heading" id="experiment-article-section-2-heading">
+        Procedure
+    </div>
+
+    <div class="content" id= "experiment-article-section-2-content">
+    <div class="divContent"  id="wrap">
+<h3><b>Objective:</b></h3>
+<p>To conduct the performance test on Francis turbine under constant speed condition.</p>
+<h3><b>Steps:</b></h3>
+<ol>
+<li> Open the Francis turbine under constant speed condition and click on the arrow mark shown at the bottom right corner.</li>
+<p><img src="../images/FS_1.png"></img></p></br>
+
+
+<li>Click on green button to start the pump and then click on the next button.</li>
+<p><img src="../images/FS_2.png"></img></p></br>
+
+<li>Note the dead weight, spring balance reading and torque reading and click on next button.</li>
+<p><img src="../images/FS_3.png"></img></p></br>
+
+<li>Click on the hand to insert the tachometer.</li>
+<p><img src="../images/FS_4.png"></img></p></br>
+
+<li>Click on hand and rotate the inlet valve to keep the speed of motor to be constant.</li>
+<p><img src="../images/FS_5.png"></img></p></br>
+
+<li>Note the speed of motor reading and click on next button.</li>
+<p><img src="../images/FS_6.png"></img></p></br>
+
+<li>Note the supply pressure reading and click on next button.</li>
+<p><img src="../images/FS_7.png"></img></p></br>
+
+<li>Note the vacuum head and total head reading and click on next button.</li>
+<p><img src="../images/FS_8.png"></img></p></br>
+
+<li>Note the initial hook gauge reading and click on the hook gauge Knob.</li>
+<p><img src="../images/FS_9.png"></img></p></br>
+
+<li>Note the final hook gauge reading, actual discharge and then click on the next button.</li>
+<p><img src="../images/FS_10.png"></img></p></br>
+
+<li>Note the results of Trial 1 and then click on the next button to continue the experiment.</li>
+<p><img src="../images/FS_11.png"></img></p></br>
+
+<li>Repeat the same procedure for further trials. After that, click on the red button to stop the pump and click on the next button to see the characteristic graphs.</li>
+<p><img src="../images/FS_12.png"></img></p></br>
+
+<li>Click on each label box to see the different characteristic graph.</li>
+<p><img src="../images/FS_13.png"></img></p></br>
+
+<ol>
+   </div>
+	</div>                      
+</section>
+  <section id="experiment-article-section-3">
+                    <div class="icon" id="experiment-article-section-3-icon">
+                  
+                    <img src="../images/selfevaluation.jpg" style="padding-left:50px;">
+</div>
+                    
+
+                    <div class="heading" id= "experiment-article-section-3-heading">
+                       Self Evaluation
+                    </div>
+		<div class="content" id=
+                    "experiment-article-section-3-content">
+                        <div class="divQuiz">
+                            <div id="displayQuiz">
+                                <form id="form11" method="post" name="form11">
+                                  <p> Check your understanding after you have gone through the basic theory and the procedure to use the simulator.</p>                             
+ <a style="margin-top: 40px;float: left;
+width: auto;
+padding: 5px 15px;
+color: #FFF;
+background-color: #008B8B;
+border: 1px solid #FFF;
+border-radius: 5px;
+text-decoration: none;" href="index2.html">Get Started</a> 
+                                </form>
+                            </div>
+<br>
+                        </div>
+                    </div>
+                </section>
+
+
+  <section id="experiment-article-section-4">
+                    <div class="icon" id="experiment-article-section-4-icon">
+                    <!-- Enclose the icon image of your lab.-->
+                    <img src="../images/simulation.jpg" style="padding-left: 20px;"></div>
+
+                    <div class="heading" id=
+                    "experiment-article-section-4-heading">
+                        Simulator
+                    </div>
+					<div class="content" id= "experiment-article-section-4-content"><center>
+					<iframe noscroll="" scrolling="no" src="../images/simulation/francis_speed/index.html" height="610px" width="810px"></iframe></center>
+                    </div>
+
+               </section>
+
+
+
+                 <section id="experiment-article-section-5">
+                    <div class="icon" id="experiment-article-section-5-icon">
+                    <!-- Enclose the icon image of your lab -->
+                    <img src="../images/assignment.jpg" style="padding-left: 27px;">
+</div>
+                    <!-- The heading for the section can be enclosed in a div tag. -->
+
+                    <div class="heading" id=
+                    "experiment-article-section-5-heading">
+                        Assignment
+                    </div>
+
+<div class="content" id="experiment-article-section-5-content">
+<ol><li>What is parallel flow turbine? Explain in detail</li>
+<li>State the advantage of Kaplan turbine over Francis turbine? </li>
+<li>How cavitation can be eliminated in a turbine? </li></ol>                        
+</div>
+                </section>
+				
+
+
+             <section id="experiment-article-section-8">
+                    <div class="icon" id="experiment-article-section-8-icon">
+                    <!-- Enclose the icon image of your lab.-->
+                    <img src="../images/quiz.jpg">
+</div>
+     <div class="heading" id=
+                    "experiment-article-section-8-heading">
+                        Quiz
+                    </div>
+
+                    <div class="content" id=
+                    "experiment-article-section-8-content">
+                        <div class="divQuiz">
+                            <div id="displayQuiz">
+                                <form id="form11" method="post" name="form11">
+                                    <p> Check your ability to answer some of the questions relevant to the simulation that you used.</p> 
+ <a style="margin-top: 40px;float: left;
+width: auto;
+padding: 5px 15px;
+color: #FFF;
+background-color: #008B8B;
+border: 1px solid #FFF;
+border-radius: 5px;
+text-decoration: none;" href="index1.html">Get Started</a>
+
+
+                                   
+                                </form>
+<br>
+                            </div>
+<br>
+                        </div>
+                    </div>
+                </section> 
+
+                <section id="experiment-article-section-7">
+                    <div class="icon" id="experiment-article-section-7-icon">
+                    <img src="../images/video.jpg" style="padding-left:7px">
+			</div>
+
+                    <div class="heading" id="experiment-article-section-7-heading">
+                        Videos
+                    </div>
+
+                    <!--<div class="content" id="experiment-article-section-7-content">
+                        <div class="divContent">
+                         NPTEL:<br>
+                             <a href="https://www.youtube.com/watch?v=bX_m53Xexvk&list=PLAC668A0566953FB5">Mechanical Vibrations</a>
+<br>
+                        </div>
+                    </div>-->
+                </section>
+
+           <section id="experiment-article-section-6">
+                    <div class="icon" id="experiment-article-section-6-icon">
+                   
+                    <img src="../images/reference.jpg" style="padding-left: 25px;">
+</div>
+
+                    <div class="heading" id="experiment-article-section-6-heading">
+                        References
+                    </div>
+
+                    <div class="content" id="experiment-article-section-6-content">
+                        <div class="divContent">
+                  <ul>
+<li><p style="font-family:courier new,courier,monospace; font-size:18px;"> P.N Modi and S.M. Seth, “Hydraulics and Fluid Mechanics”, Standard Book House, Delhi, 2010. </li></p>
+<li><p style="font-family:courier new,courier,monospace; font-size:18px;"> R.K. Rajput, “Elements of Mechanical Engineering”, Laxmi publications, 2005. </li></p>
+<li><p style="font-family:courier new,courier,monospace; font-size:18px;"> C.E. Brennen, “Cavitation and Bubble Dynamics”, Oxford University Press, Oxford, 1995. </li></p>
+<li><p style="font-family:courier new,courier,monospace; font-size:18px;"> S.K. Agrawal, “Fluid Mechanics and Machinery”, Tata McGraw- Hill Publishing Company Limited, New Delhi.</p></li></ul>
+
+</div>
+                    </div>
+
+                </section>
+
+<section id="lab-article-section-9">
+
+<div id="lab-article-section-9-icon" class="icon">
+<!-- Enclose the icon image for the section. -->
+<img src="../images/feedback.jpg" style="padding-left: 16px;" />
+</div>
+<!-- The heading for the section can be enclosed in a div tag and shown with a <h2> tag -->
+<div id="lab-article-section-9-heading" class="heading">
+Feedback
+</div>
+<!-- Write the section content inside a paragraph element, You can also include images with <img> tag -->
+<div id="lab-article-section-9-content" class="content">
+
+
+<!-- Custom form start -->
+
+<form method="POST" action="http://rtlabs.nitk.ac.in/feedback.php" role="form">
+<input type="hidden" name="code" value="1">
+<div class="form-group"> 
+<label for="name">What is your name?</label> <span class="error">*</span><br>
+<input type="text" style="width:700px;" name="name" class="form-control" value="" placeholder="You may chose to be Anonymous if you do not wish to disclose your name."required="">
+<br><br>
+</div>
+<div class="form-group"> 
+<label for="org">Which organization are you associated with?</label><span class="error">*</span><br>
+<input type="text" style="width:700px;" name="org"  class="form-control" value="" placeholder="Name of your College/Institute/University/Organization."required="">
+<br><br>
+</div>
+<div class="form-group">
+<label for="discipline">Which is your primary discipline?</label><span class="error">*</span><br>
+<input type="text" style="width:700px;" name="discipline" class="form-control" value="" placeholder="Example: Mechanical Engineering, Nanotechnology, Biomedical, Mathematics etc."required="">
+
+<br><br>
+</div>
+<label>Which of the following best describes your current work?</label> <span class="error">*</span><br>
+<div class="radio"><label><input type="radio" required name="occ" checked="true"  value="Studying">Studying<br></label></div>
+<div class="radio"><label><input type="radio" required  name="occ"  value="Teaching">Teaching<br></label></div>
+<div class="radio"><label><input type="radio" required name="occ"   value="Research">Research<br></label></div>
+<div class="radio"><label><input type="radio" required name="occ"  value="Industry">Industry<br></label></div>
+<div class="radio"><label><input type="radio" required name="occ"   value="other">Other <input type="text" name="occ-other"></input></label></div>
+
+<br>
+<div class="form-group">
+<label>Experiment Performed </label><span class="error">* </span><br>
+<select class="form-control" name="exp"  required>
+<option value="Choose" disabled>Choose</option>
+<option value="Francis Turbine - Constant Speed">Francis Turbine - Constant Speed</option>
+</select>
+
+</div>
+<br>
+<label>Please tell your agreement with the following </label><span class="error">* </span><br>
+<table style="width:100%; margin:0">
+<tr>
+<td></td>
+<td style="text-align:center; width:70px">Excellent</td>    
+<td style="text-align:center; width:70px">Very Good</td>
+<td style="text-align:center; width:70px">Good</td>
+<td style="text-align:center; width:70px">Average</td>
+<td style="text-align:center; width:70px">Needs Improvement</td>
+</tr>
+<tr>
+<td>To what degree was the actual lab environment simulated</td>
+
+<td style="text-align:center;">   <div class="radio"><label><input type="radio" checked="true"  required name="rea"  value="5"></label></div></td>    
+<td style="text-align:center;">   <div class="radio"><label><input type="radio" required  name="rea"  value="4"></label></div></td>
+<td style="text-align:center;">   <div class="radio"><label><input type="radio"required name="rea"   value="3"></label></div></td>
+<td style="text-align:center;">   <div class="radio"><label><input type="radio" required name="rea"  value="2"></label></div></td>
+<td style="text-align:center;">   <div class="radio"><label><input type="radio" required name="rea"  value="1"></label></div></td>
+</tr>
+<tr>
+<td>The theory and procedure were found to be helpful</td>
+<td style="text-align:center;"> <div class="radio"><label><input type="radio"required checked="true"  name="tnp"  value="5"></label></div></td>    
+<td style="text-align:center;"> <div class="radio"><label><input type="radio"required  name="tnp"   value="4"></label></div></td>
+<td style="text-align:center;"> <div class="radio"><label><input type="radio"required  name="tnp"   value="3"></label></div></td>
+<td style="text-align:center;"> <div class="radio"><label><input type="radio"required name="tnp"  value="2"></label></div></td>
+<td style="text-align:center;"> <div class="radio"><label><input type="radio"required name="tnp"   value="1"></label></div></td>
+</tr>
+<tr>
+<td>The results of simulation/experiment were easily interpretable</td>
+<td style="text-align:center;"> <div class="radio"><label><input type="radio" checked="true"  required name="eas"  value="5"></label></div></td>    
+<td style="text-align:center;"> <div class="radio"><label><input type="radio"required name="eas"   value="4"></label></div></td>
+<td style="text-align:center;"> <div class="radio"><label><input type="radio"required name="eas"  value="3"></label></div></td>
+<td style="text-align:center;"> <div class="radio"><label><input type="radio"required name="eas"  value="2"></label></div></td>
+<td style="text-align:center;"> <div class="radio"><label><input type="radio"required name="eas"   value="1"></label></div></td>
+</tr>
+</table>
+<br>
+<div class="form-group">
+<label for="help">How helpful do you feel the system is?</label>
+<br><input type="text" style="width:700px;" class="form-control"name="help" value="">
+<br><br>
+</div>
+<label>Please answer the following questions</label><span class="error">* </span><br>
+<table style="width:100%; border:none; margin:0">
+<tr>
+<td></td>
+<td>Yes</td>    
+<td>No</td>
+</tr>
+<tr>
+<td>Did you get the feel of actual lab while performing the simulation/experiments</td>
+<td> <div class="radio"><label><input type="radio"required name="a" checked="true"  value="Y"></label></div></td>    
+<td> <div class="radio"><label><input type="radio"required name="a"  value="N"></label></div></td>
+</tr>
+<tr>
+<td>Did you read the theory and procedure before performing the simulation/experiments</td>
+<td> <div class="radio"><label><input type="radio"required name="b" checked="true"  value="Y"></label></div></td>    
+<td> <div class="radio"><label><input type="radio"required name="b"   value="N"></label></div></td>
+</tr>
+
+<tr>
+<td>Could you conduct the simulation/experiment successfully</td>
+<td> <div class="radio"><label><input type="radio"required name="c" checked="true"  value="Y"></label></div></td>    
+<td> <div class="radio"><label><input type="radio"required name="c" value="N"></label></div></td>
+</tr>
+<tr>
+<td>Could you compare your results with the given typical results in explore</td>
+<td> <div class="radio"><label><input type="radio"required name="d" checked="true"  value="Y"></label></div></td>    
+<td> <div class="radio"><label><input type="radio"required name="d"   value="N"></label></div></td>
+</tr>
+<tr>
+<td>Do you think performing experiments through virtual labs are more challenging than the real experiments</td>
+<td> <div class="radio"><label><input type="radio"required name="e"  checked="true"  value="Y"></label></div></td>    
+<td> <div class="radio"><label><input type="radio"required name="e"   value="N"></label></div></td>
+</tr>
+<tr>
+<td>Do you think doing experiments through virtual lab gives scope for more innovative and creative research work</td>
+<td> <div class="radio"><label><input type="radio"required name="f"  checked="true"  value="Y"></label></div></td>    
+<td> <div class="radio"><label><input type="radio"required name="f"  value="N"></label></div></td>
+</tr>
+</table>
+<br><br>
+<div class="form-group">
+<label for="c1">Please mention any problems/difficulties you faced while performing the simulation/experiment. It will help us improve the content for your later visits.</label>
+<br><textarea  name="c1" class="form-control" rows="4" cols="50"></textarea>
+<br><br>
+</div>
+<div class="form-group">
+<label for="c2">What do you find most interesting thing about the simulation/experiment? We would be happy to know what delighted you.</label>
+<br><textarea name="c2" class="form-control" rows="4" cols="50"></textarea>
+<br><br>
+</div>
+<div class="form-group">
+<label for="c2">Is there anything else that you would like to tell us ?</label>
+<br><textarea name="c3"class="form-control"  rows="4" cols="50"></textarea>
+<br><br>
+</div>
+<button type="submit" name="submit"  class="btn btn-default" value="Submit"> Submit </button>
+</form>
+
+
+<!-- Custom form complete -->
+
+</div>
+	
+</section>
+               
+            </div>
+        </article>
+    </div>
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+
+<title>SOLVE</title>
+<link rel="stylesheet" href="hydr.css" />
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>-->
+<script type="text/javascript" src= "jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src= "new1.js"></script>
+
+<script>
+var simsubscreennum=0;
+var temp=0;
+var lnt=0;
+var values=[[2.87,0.5,5,10,64,0.014,10,31,0.152,0.74,1.74,14.6,6.8],
+			[2.87,1,10,10,95,0.00947,10,30.5,0.154,2.48,3.48,20.2,15.3],
+			[2.87,1.5,15,10,123,0.00731,10,30,0.156,4.23,5.53,23.36,19.7],
+			[2.87,2,20,10,156,0.0058,10,30,0.156,5.97,6.97,24.97,22.01],
+			[2.87,2.5,25,10,170,0.0053,10,30,0.156,7.71,8.71,28.62,26.1],
+			[2.87,3,30,10,210,0.0043,10,29.5,0.159,9.45,10.45,27.52,25.5],]
+			
+var lnt=0;
+
+</script>
+</head>
+
+
+
+<body style="margin:0">
+<!--Simulation Screen start		-->
+<div id="simscreen">
+
+<!--Title of Simulation		-->
+<div id="title"><h3>FRANCIS TURBINE - Constant Speed</h3></div>
+
+<!--SubScreen Home	-->	
+<div class="simsubscreen" id="canvas0">
+<h4 class="incanvas" >Objective</h4>
+<p class="incanvas" >To conduct the performance test on Francis turbine under constant speed.</p>
+<h4 class="incanvas" >Apparatus used:</h4>
+<p class="incanvas" >Francis turbine set up with centrifugal pump, pressure gauges, weighing balance weights, stopwatch, measuring scale, etc.</p>
+<img id="" style="position: absolute; left: 80px; top: 125px;" src="Images/1.png"/>
+</div>
+
+
+
+
+<!--Step1	-->	
+
+<div class="simsubscreen" id="canvas1" style="visibility:hidden">
+<strong id="titlestep" class="incanvas">STEP </strong><span class="circlebg" id="stepnumber">&nbsp;1&nbsp;</span><p id="pumptext" class="steptext"> Start the pump by pressing the power button.</p>
+<img id="can1-1" style="position: absolute; left: 50px; top: 130px;" src="Images/1.1.png">
+<img id="can1-2" style="position: absolute; left: 600px; top: 125px;" src="Images/board.png">
+<img id="can1on" style="position: absolute; left: 635px; top: 160px;" src="Images/on.png">
+<img id="can1off" style="position: absolute; left: 635px; top: 185px;" src="Images/off.png">
+<img id="onarm" src="Images/hand.png" style="margin-left: -50px; margin-top: -50px; position: absolute; visibility: hidden; left: 689px; top: 215px;">
+
+</div>
+<!--Step2	-->	
+
+<div class="simsubscreen" id="canvas2" style="visibility:hidden">
+
+<strong id="titlestep" class="incanvas">STEP &nbsp;</strong><span class="circlebg" id="stepnumber">&nbsp;2&nbsp;</span><p id="pumptext-2" class="steptext">&nbsp;Apply the weight on the pan note the spring balance reading for the corresponding applied weight.</p>
+<img id="can2-1" style="position: absolute; left: 50px; top: 130px;" src="Images/1.1.png">
+<img id="can2-2" style="position: absolute; left: 535px; top: 160px;" src="Images/delivery_valve.png">
+<img id="can2-3" style="position: absolute; left: 575px; top: 235px; transform-origin: 25% 26% 0px; animation: 1.6s ease 0s normal none 1 running valveturn;" src="Images/valvearm.png">
+<p id="can2-4" style="position:absolute;top: 400px; left:370px"> Supply head = 2.87 m  </p>
+
+</div>
+
+<!--Step3	-->	
+<div class="simsubscreen" id="canvas3" style="visibility:hidden">
+<strong class="incanvas">STEP &nbsp;</strong><span class="circlebg">&nbsp;3&nbsp;</span><p class="steptext">&nbsp;Note the speed of the motor.</p>
+<img id="can3-1" style="position: absolute; left: 10px; top: 130px;" src="Images/1.1.png">
+<img id="can3-2" style="position: absolute; left: 335px; top: 160px;" src="Images/Inlet valve_horizontal_1.png">
+<img id="can3-3" style="position: absolute; left: 330px; top: 196px; transform-origin: 14% 15% 0px; animation: 1.6s ease 0s normal forwards 1 running valveturn;" src="Images/Inlet valve_horizontal.png">
+<img id="can3-4" style="position: absolute; left: 530px; top: 125px;" src="Images/supply head.png">
+<img id="can3-5" style="position: absolute; left: 585px; top: 198px; transform-origin: 65% 35% 0px; animation: 1s ease 0s normal forwards 1 running valveturn-2;" src="Images/arrow.png">
+
+<p id="can3-6" style="position:absolute;top: 400px; left:370px"> Delivery pressure =  </p>
+<p id="can3-7" style="position:absolute;top: 430px; left:370px"> Delivery head =  </p>
+
+</div>
+
+<!--Step4	-->	
+<div class="simsubscreen" id="canvas4" style="visibility:hidden">
+<strong class="incanvas">STEP &nbsp;</strong><span class="circlebg">&nbsp;4&nbsp;</span><p class="steptext-2">&nbsp;Set the head of water to be constant.</p>
+<img id="can4-1" style="position: absolute; left: 50px; top: 130px;" src="Images/1.1.png">
+<img id="can4-2" style="position: absolute; left: 535px; top: 160px;" src="Images/stopwatch.1.png">
+<img id="can4-3" style="position: absolute; left: 603px; top: 230px;" src="Images/stopwatch_needle.png">
+<p id="can4-4" style="position:absolute;top: 370px; left:370px"> Height of water collected in the collecting tank = 10cm</p>
+<p id="can4-5" style="position:absolute;top: 400px; left:370px"> Time required by water to fill 10cm height =  </p>
+<p id="can4-6" style="position:absolute;top: 430px; left:370px"> Discharge of waste water =  </p>
+</div>
+
+
+<!--Step5	-->	
+<div class="simsubscreen" id="canvas5" style="visibility:hidden">
+<strong class="incanvas">STEP &nbsp;</strong><span class="circlebg">&nbsp;5&nbsp;</span><p class="steptext">&nbsp;Determine the useful water discharge by calculating the time required by water to collect upto 10cm in the collecting tank.</p>
+<img id="can5-1" style="position: absolute; left: 50px; top: 130px;" src="Images/1.1.png">
+<p id="can5-2" style="position:absolute;top: 170px; left:370px"> Height of water collected in the collecting tank = 10cm</p>
+<p id="can5-3" style="position:absolute;top: 200px; left:370px"> Time required by water to fill 10cm height =  </p>
+<p id="can5-4" style="position:absolute;top: 230px; left:370px"> Discharge of useful water =  </p>
+</div>
+
+<!--Step6	-->	
+<div class="simsubscreen" id="canvas6" style="visibility:hidden">
+<strong class="incanvas" style="position:absolute;top: 30px; left:50px"><h2>Observation</h2></strong>
+<p id="can6-1" style="position:absolute;top: 80px; left:220px"> Dimension of useful watertank : Length = 30 cm</p>
+<p id="can6-2" style="position: absolute; top: 110px; left: 410px;"> Breadth = 30 cm </p>
+<p id="can6-3" style="position:absolute;top: 140px; left:220px"> Dimension of waste watertank : Length = 77 cm</p>
+<p id="can6-4" style="position: absolute; top: 170px; left: 410px;"> Breadth = 61 cm</p>
+
+<strong class="incanvas" style="position:absolute;top: 250px; left:50px"><h2>Result</h2></strong>
+
+<p id="can6-5" style="position:absolute;top: 300px; left:220px"> D'Aubuissons Efficiency =  </p>
+<p id="can6-6" style="position:absolute;top: 330px; left:220px">  Rankin's efficiency=  </p>
+</div>
+
+<!--Step7	-->	
+<div class="simsubscreen" id="canvas7" style="visibility:hidden">
+<<strong class="incanvas" ><h2>Characteristic Curves</h2></strong>
+<span id="step7text1" style="border: 2px solid; position:absolute;top: 90px; left:40px" onclick=" document.getElementById('graph').src='Images/CS_1.png'" >&nbsp;&nbsp;Efficiency vs Output Power&nbsp;&nbsp;</span>
+<span id="step7text2" style="border: 2px solid; position:absolute;top: 90px; left:240px" onclick=" document.getElementById('graph').src='Images/CS_2.png'">&nbsp;&nbsp;Efficiency vs Actual Discharge&nbsp;&nbsp;</span>
+<span id="step7text3" style="border: 2px solid; position:absolute;top: 90px; left:455px" onclick=" document.getElementById('graph').src='Images/CS_3.png'">&nbsp;&nbsp;Actual Discharge vs Output Power&nbsp;&nbsp;</span>
+<img id="graph" style="position:absolute; top:200px; left:100px" src="Images/CS_1.png" />
+</div>
+
+	
+<!--next  Arrow	-->	
+<div id="nav">
+	<img id="nextButton" onclick="navNext(); " src="Images/Next.png" />
+</div>
+
+<!--Blinking Arrow	-->	
+<img class ="" id="arrow1" style="visibility:hidden" src="Images/arrow1.png"/>
+
+
+</body>
+</html>

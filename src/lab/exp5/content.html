@@ -1,0 +1,602 @@
+<!-- This file needs to be edited by the lab developer to suit the requirements of their lab in particular.-->
+<!-- Add class="default" to include any element as it is specified in default.html. Do not include class="default" to the elements that you want to edit -->
+<!DOCTYPE html>
+<html>
+<head>
+<title> Fluid Machinery Lab - SOLVE @ NITK Surathkal
+</title>
+</head>
+
+<body>
+   <div id="experiment">
+        <!-- The Experiment Document Container-->
+        <!-- The lab Header contains the logo and the name of the lab,  usually displayed on the top of the page-->
+        <header class="default" id="experiment-header">
+            <div class="logo" id="experiment-header-logo">
+            <!-- Enclose the logo image of your lab or write it in text-->
+            <img src="../images/logo.jpg">
+</div>
+
+            <div class="heading" id="experiment-header-heading">
+                <!-- Write the name of your lab and link it to the home page of your lab (h1 tag is preferred while writing your lab name)-->
+                <a href="../index.html">Fluid Machinery Lab</a>
+            </div>
+<!-- Add any additional element you want to add to the lab header, For example : Help (Enclosing them with suitable div is recommended)-->
+        </header>
+<!-- The lab article is the main content area where all the 
+  experiment content sits-->
+
+        <article id="experiment-article">
+            <!-- The lab article has an header, optional navigational 
+    menu, number of sections, an optional sidebar and a closing 
+    footer-->
+
+            <div class="breadcrumb" id="experiment-article-breadcrumb"></div>
+
+            <header class="heading" id="experiment-article-heading">
+			Pelton Wheel - Constant Head
+            </header>
+<!-- Navigation menu is useful to organize the view of multiple sections inside the article-->
+
+            <nav class="default" id="experiment-article-navigation">
+                <ul id="experiment-article-navigation-menu">
+                    <!-- The menu can be dynamically generated to contain 
+          the headings of your sections or instead write the 
+          menu items of your choice individually enclosedu in 
+          &lt;li&gt; tag as shown below-->
+                </ul>
+            </nav>
+<!-- All the sections of your lab or experiment can be enclosed together with a div element as shown below-->
+
+			
+            <div id="experiment-article-sections">
+			
+                <!-- First section of the article-->
+	<section id="experiment-article-section-1">
+        <div class="icon" id="experiment-article-section-1-icon">
+                    <!-- Enclose the icon image of your lab. -->
+        <img src="../images/theory.jpg"></div>
+		<div class="heading" id="experiment-article-section-1-heading">
+                        Theory
+        </div>
+
+        <div class="content" id="experiment-article-section-1-content">
+        <div class="divContent"  id="wrap">
+        <!--Theory Content -->
+			<p style="text-indent: 50px;">Pelton wheel is impulse type water turbine which extracts energy from impulse of moving water when the water strikes 
+			the pelton cup at very high speed, it induces an impulsive force which makes the turbine rotate. In short the pelton wheel transforms the kinetic 
+			energy of water jet into rotational energy.</p>
+			</br>
+			<center>
+			<img src="../images/PT_1.png"style =" width:536px; height:270px;">
+			</center></br>
+
+
+			<p style="text-indent: 50px;">The spoon shaped buckets are mounted on the circumferential rim of drive wheel called runner. As the high-speed jet
+			of water impinges upon the pelton cups,the direction of the water velocity is changed to follow the contour of the bucket. The impulse energy of water 
+			exerts torque on the bucket and makes the wheel to spin, and finally the water takes U-turn and exits at the sides of pelton cup with low velocity. </p>
+
+			<p style="text-indent: 50px;">Control of the turbine is maintained by hydraulically operated needle nozzles in each jet. In addition, a jet 
+			deflector is provided for emergency shutdown. The deflector diverts the water jet from the buckets to the wall of the pit liner. This feature 
+			provides surge protection for the penstock without the need for a pressure relief valve because load can be rapidly removed from the generator 
+			without changing the flow rate. Control of the turbine may also be accomplished by the deflector alone. On these units the needle nozzle is 
+			manually operated and the deflector diverts a portion of the jet for lower loads. This method is less efficient and normally used for speed 
+			regulation of the turbine under constant load. </p></br>
+			
+			<p>The main parts of pelton turbine are</p></br>
+			<ol>
+			<li>
+				<b>Nozzle and flow regulation arrangement:</b>
+				The amount of water flowing out from the nozzle is regulated by providing a spear in the nozzle. The spear is a conical shaped needle which is 
+				operated by manually or automatically in an axial direction depending upon the size of the unit. 
+			</li>
+			</br>
+			
+			<center>
+			<img src="../images/PT_2.png"style =" width:350px; height:233px;">
+			</center></br>
+			 
+			<li> <b>Runner and buckets:</b>
+				Runner consists of a circular disc on the periphery of which number of buckets are attached with equal spacing. The pelton buckets are in cup 
+				or bowl shape and each bucket is divided into symmetrical parts by a wall called splitter. The splitter divides the jet of water into two equal
+				parts. The buckets are designed in such a way that the water jet gets deflected through 160° or 170°. The buckets are made of bronze, cast 
+				iron or stainless steel depending upon the head at the inlet of the turbine. 
+			</li>
+			<li> <b>Casing:</b> 
+				The function of water is to prevent the splashing of water and to guide the discharged water to tail race. The casing of Pelton Wheel does 
+				not perform any Hydraulic function. 
+			</li>
+			<li> <b>Breaking jet:</b>
+				When the nozzle is closed completely by moving the spear in forward direction, the amount of water striking the bucket reduces to zero. 
+				But due inertia, the runner goes on revolving for some more time. To stop the runner in a short time, a small nozzle is provided which 
+				directs the water from the back of the buckets. This water jet is known as breaking jet. 
+			</li></br>
+			
+			<p><b>Important terms:</b> </p>
+
+			<center>
+				<img src="../images/PT_3.png"style =" width:576px; height:293px;">
+			</center>
+
+			<p><b>Headrace:</b> A dam constructed across a river or a channel to store water.  The reservoir is also known as Headrace. </p></br>
+
+			<p><b>Tailrace:</b> It is the channel which conveys the water out from the turbine casing after hitting the pelton bucket. </p></br>
+
+			<p><b>Gross head (H<sub>g</sub>):</b> It is the vertical difference between headrace and tailrace. </p></br>
+			<p><b>Net head (H):</b> It is the actual head available at the inlet of the turbine to work. </p></br>
+			
+			<p>H = H<sub>g</sub> –h<sub>f</sub></p>
+			<p>Where,</br> h<sub>f</sub> = total loss of head due to friction during the transit of water from headrace to tailrace and is given by, </p></br>
+
+			<p style="text-indent:100px">
+			<img src="../images/PT_4.png"style =" width:100px; height:45px;vertical-align middle"></br>
+			</p>
+
+			<p>Where,</br> f = coefficient of friction of penstock depending on the type of material of penstock</p>
+			<p>L = total length of penstock</p>
+			<p>V = mean flow velocity of water through the penstock</p>
+			<p>d = diameter of penstock and</p>
+			<p>g = acceleration due to gravity</p>
+			</br>
+
+			<p><b>Governing mechanism in Pelton Wheel:</b> </p>
+			<p style="text-indent: 50px;">A governing mechanism which controls position of the spear head meets the power demand requirement. With lowering 
+			power demand the spear head at water inlet nozzle is moved in. So that water flow rate get reduced. If power demand increases spear head is
+			moved out this will increase the flow rate. 
+			</p>
+
+			<p style="text-indent: 50px;">So, in pelton wheel, the power supply can be made to meet the power demand by controlling the water flow rate. 
+			So this governing mechanism in turn will balance the power supply and power demand and will make sure that the turbine will rotates at the 
+			constant speed. This speed is also conforms to power supply frequency. So this mechanism acts as speed governing mechanism in pelton wheel. 
+			</p></br>
+			
+			<p><b>Number of buckets in pelton wheel:</b> </p>
+			<p style="text-indent: 50px;">Number of buckets in pelton wheel is one of the most important parameter in the design of pelton turbine. If the 
+			number of buckets are inadequate, then, this will results in loss of water jet. That is, when one of bucket comes in contact with water jet, 
+			the next bucket may not get engaged with water jet. This will results in loss of water jet for a short duration which later tends to sudden drop 
+			in efficiency. 
+			</p></br>
+
+			<div>
+				<span>Number of buckets =</span><img src="../images/PT_5.png"style =" width:60px; height:40px;vertical-align:middle"><span>=</span>
+				<img src="../images/PT_6.png"style =" width:70px; height:15px;vertical-align:middle">
+			</div></br>
+			<div>
+				<span>Where, m = jet ratio = </span><img src="../images/PT_7.png"style =" width:20px; height:48px;vertical-align:middle">
+			</div></br>
+			
+			<p style="text-indent: 50px;">Since the water jet is always open to atmosphere, the pressure of water jet at inlet and outlet will be same and will 
+			be same as atmospheric pressure. However absolute velocity of fluid will have huge drop from inlet to exit of the bucket. This drop of kinetic energy 
+			is the maximum energy that the bucket can absorb. </p>
+
+			<p style="text-indent: 50px;">So it is clear that, pelton turbine gains mechanical energy purely due to change in kinetic energy of jet, not due 
+			to pressure energy change. Which means, pelton turbine is a pure impulse machine. 
+			</p>
+ 
+			<p>Power extraction: </p>
+			<center>
+			<img src="../images/PT_8.png"style =" width:320px; height:270px;">
+			</center>
+			
+			<p style="text-indent: 50px;">If the pelton wheel buckets are held stationary, then the power extraction is zero. If the pelton wheel buckets are 
+			rotating with the same speed of water jet, the jet won’t be able to hit the bucket. Hence in this case also the power extraction will be zero. 
+			Hence the power extraction is zero both at speed of bucket is zero and when bucket speed is same as jet speed.
+			</p></br>
+			
+			<p><b>Types of efficiencies:</b> </p>
+			<p>Depending on the considerations of input and output, the efficiencies can be classified as</p>
+			<br>
+			<ul>
+				<li>Hydraulic Efficiency</li>
+				<li>Mechanical Efficiency</li>
+				<li>Overall Efficiency</li>
+			</ul></br>
+			
+			<p><b>Hydraulic Efficiency: (&eta;<sub>h</sub>) </b></p>
+			<p style="text-indent: 50px;">It is the ratio of the power developed by the runner of a turbine to the power supplied at the inlet of a turbine. 
+			Since the power supplied is hydraulic, and the probable loss is between the striking jet and vane it is rightly called hydraulic efficiency.
+			</p></br>
+			
+			<center><img src="../images/PT_9.png"style =" width:120px; height:35px;"></center>
+			</br>
+
+			<p><b>Mechanical Efficiency: (&eta;<sub>m</sub>)</b> </p>
+			<p style="text-indent: 50px;">It is the ratio of the power available at the shaft to the power developed by the runner of a turbine. This depends 
+			on the slips and other mechanical problems that will create a loss of energy between the runner in the annular area between the nozzle and spear,
+			the amount of water reduces as the spear is pushed f or war d and vice – versa and shaft which is purely mechanical and hence mechanical 
+			efficiency.
+			</p></br>
+
+			<center><img src="../images/PT_10.png"style =" width:120px; height:34px;"></center></br>
+
+			<p><b>Overall Efficiency: (&eta;)</b> </p>
+			<p style="text-indent: 50px;">It is the ratio of the power available at the shaft to the power supplied at the inlet of a turbine. As this covers 
+			over all problems of losses in energy, it is known as overall efficiency. This depends on both the hydraulic losses and the slips and other 
+			mechanical problems that will create a loss of energy between the jet power supplied and the power generated at the shaft available for coupling
+			of the generator. 
+			</p></br>
+			<center><img src="../images/PT_11.png"style =" width:110px; height:36px;"></br></center></br></br></br>
+			
+			<!-- Theory Content End--> 
+		</div>
+		</div>                       
+	</section>
+	
+	
+ <section id="experiment-article-section-2">
+                    <div class="icon" id="experiment-article-section-2-icon">
+                    <!-- Enclose the icon image of your lab.-->
+                    <img src="../images/procedure.jpg" style="padding-left: 20px;"></div>
+
+                    <div class="heading" id=
+                    "experiment-article-section-2-heading">
+                        Procedure
+                    </div>
+
+                    <div class="content" id=
+                    "experiment-article-section-2-content">
+                        <div class="divContent"  id="wrap">
+                        
+<h3><b>Objective: </b></h3>
+<p>To conduct the performance test on Pelton turbine under constant head</p>
+
+<h3><b>Steps:</b></h3>
+<ol>
+<li>Open the Pelton turbine under constant head condition and click on the arrow mark shown at the bottom right corner.</li>
+<p><img src="../images/PH_1.png"></img></p></br>
+
+<li>Click on the green button to start the pump and click on next button.</li>
+<p><img src="../images/PH_2.png"></img></p></br>
+
+
+<li>Click on the hand to rotate the inlet valve and allow the water to flow.</li>
+<p><img src="../images/PH_3.png"></img></p></br>
+
+
+<li>Note the constant head reading and click on next button.</li>
+<p><img src="../images/PH_4.png"></img></p></br>
+
+
+<li>Note the torque reading for the corresponding applied weight, and click on next button.</li>
+<p><img src="../images/PH_5.png"></img></p></br>
+
+
+<li>Note the speed of motor as shown in the circle and click on next button.</li>
+<p><img src="../images/PH_6.png"></img></p></br>
+
+
+<li>Note the initial hook gauge reading and click on hook gauge knob.</li>
+<p><img src="../images/PH_7.png"></img></p></br>
+
+
+<li>Note the final hook gauge reading and actual discharge, then click on next button.</li>
+<p><img src="../images/PH_8.png"></img></p></br>
+
+
+<li>Note the results of first trial, then click on next button.</li>
+<p><img src="../images/PH_9.png"></img></p></br>
+
+
+<li>Repeat the same procedure for further trials. After that, click on the red button to stop the pump and click on the next button to see the characteristic graphs.</li>
+<p><img src="../images/PH_10.png"></img></p></br>
+
+<li>Click on each label box to see the different characteristic graph.</li>
+<p><img src="../images/PH_11.png"></img></p></br>
+
+
+		</ol>
+
+		</div>
+	</div>                      
+</section>
+  <section id="experiment-article-section-3">
+                    <div class="icon" id="experiment-article-section-3-icon">
+                  
+                    <img src="../images/selfevaluation.jpg" style="padding-left:50px;">
+</div>
+                    
+
+                    <div class="heading" id= "experiment-article-section-3-heading">
+                       Self Evaluation
+                    </div>
+		<div class="content" id=
+                    "experiment-article-section-3-content">
+                        <div class="divQuiz">
+                            <div id="displayQuiz">
+                                <form id="form11" method="post" name="form11">
+                                  <p> Check your understanding after you have gone through the basic theory and the procedure to use the simulator.</p>                             
+ <a style="margin-top: 40px;float: left;
+width: auto;
+padding: 5px 15px;
+color: #FFF;
+background-color: #008B8B;
+border: 1px solid #FFF;
+border-radius: 5px;
+text-decoration: none;" href="index2.html">Get Started</a> 
+                                </form>
+                            </div>
+<br>
+                        </div>
+                    </div>
+                </section>
+
+
+  <section id="experiment-article-section-4">
+                    <div class="icon" id="experiment-article-section-4-icon">
+                    <!-- Enclose the icon image of your lab.-->
+                    <img src="../images/simulation.jpg" style="padding-left: 20px;"></div>
+
+                    <div class="heading" id=
+                    "experiment-article-section-4-heading">
+                        Simulator
+                    </div>
+					<div class="content" id= "experiment-article-section-4-content"><center>
+					<iframe noscroll="" scrolling="no" src="../images/simulation/pelton_head/index.html" height="610px" width="810px"></iframe></center>
+					</div>          
+
+               </section>
+
+
+
+                 <section id="experiment-article-section-5">
+                    <div class="icon" id="experiment-article-section-5-icon">
+                    <!-- Enclose the icon image of your lab -->
+                    <img src="../images/assignment.jpg" style="padding-left: 27px;">
+</div>
+                    <!-- The heading for the section can be enclosed in a div tag. -->
+
+                    <div class="heading" id=
+                    "experiment-article-section-5-heading">
+                        Assignment
+                    </div>
+
+<div class="content" id="experiment-article-section-5-content">
+<ol><li>Why is a Pelton wheel suitable for high head only? </li>
+<li> What is meant by speed ratio of the pelton wheel? </li>
+<li> Explain governing of impulse turbine? </li>
+<li> How does the impulse turbine differ from reaction turbine? </li>
+<li> Why is the lower portion of the bucket of pelton wheel cutoff? </li>
+<li> On what factors does the cavitation in water turbines depend? </li></ol>                     
+</div>
+                </section>
+				
+
+
+             <section id="experiment-article-section-8">
+                    <div class="icon" id="experiment-article-section-8-icon">
+                    <!-- Enclose the icon image of your lab.-->
+                    <img src="../images/quiz.jpg">
+</div>
+     <div class="heading" id=
+                    "experiment-article-section-8-heading">
+                        Quiz
+                    </div>
+
+                    <div class="content" id=
+                    "experiment-article-section-8-content">
+                        <div class="divQuiz">
+                            <div id="displayQuiz">
+                                <form id="form11" method="post" name="form11">
+                                    <p> Check your ability to answer some of the questions relevant to the simulation that you used.</p> 
+ <a style="margin-top: 40px;float: left;
+width: auto;
+padding: 5px 15px;
+color: #FFF;
+background-color: #008B8B;
+border: 1px solid #FFF;
+border-radius: 5px;
+text-decoration: none;" href="index1.html">Get Started</a>
+
+
+                                   
+                                </form>
+<br>
+                            </div>
+<br>
+                        </div>
+                    </div>
+                </section> 
+
+                <section id="experiment-article-section-7">
+                    <div class="icon" id="experiment-article-section-7-icon">
+                    <img src="../images/video.jpg" style="padding-left:7px">
+			</div>
+
+                    <div class="heading" id="experiment-article-section-7-heading">
+                        Videos
+                    </div>
+
+                    <!--<div class="content" id="experiment-article-section-7-content">
+                        <div class="divContent">
+                         NPTEL:<br>
+                             <a href="https://www.youtube.com/watch?v=bX_m53Xexvk&list=PLAC668A0566953FB5">Mechanical Vibrations</a>
+<br>
+                        </div>
+                    </div>-->
+                </section>
+
+           <section id="experiment-article-section-6">
+                    <div class="icon" id="experiment-article-section-6-icon">
+                   
+                    <img src="../images/reference.jpg" style="padding-left: 25px;">
+</div>
+
+                    <div class="heading" id="experiment-article-section-6-heading">
+                        References
+                    </div>
+
+                    <div class="content" id="experiment-article-section-6-content">
+                        <div class="divContent">
+						 <ul>
+<li><p style="font-family:courier new,courier,monospace; font-size:18px;">P.N Modi and S.M. Seth, “Hydraulics and Fluid Mechanics”, Standard Book House, Delhi, 2010.</p></li>
+<li><p style="font-family:courier new,courier,monospace; font-size:18px;">R.K. Rajput, "Elements of Mechanical Engineering", Laxmi publications, 2005.</p></li>
+<li><p style="font-family:courier new,courier,monospace; font-size:18px;">K. Subramanya, "Hydraulic machinery", Tata McGraw-Hill Education, 2013.</p></li>
+<li><p style="font-family:courier new,courier,monospace; font-size:18px;">Miller, R. W., Flow Measurement Engineering Handbook, Second Edition, McGraw-Hill, 1989.</p></li></ul>
+            </div>
+                    </div>
+
+                </section>
+
+<section id="lab-article-section-9">
+
+<div id="lab-article-section-9-icon" class="icon">
+<!-- Enclose the icon image for the section. -->
+<img src="../images/feedback.jpg" style="padding-left: 16px;" />
+</div>
+<!-- The heading for the section can be enclosed in a div tag and shown with a <h2> tag -->
+<div id="lab-article-section-9-heading" class="heading">
+Feedback
+</div>
+<!-- Write the section content inside a paragraph element, You can also include images with <img> tag -->
+<div id="lab-article-section-9-content" class="content">
+
+
+<!-- Custom form start -->
+
+<form method="POST" action="http://rtlabs.nitk.ac.in/feedback.php" role="form">
+<input type="hidden" name="code" value="1">
+<div class="form-group"> 
+<label for="name">What is your name?</label> <span class="error">*</span><br>
+<input type="text" style="width:700px;" name="name" class="form-control" value="" placeholder="You may chose to be Anonymous if you do not wish to disclose your name."required="">
+<br><br>
+</div>
+<div class="form-group"> 
+<label for="org">Which organization are you associated with?</label><span class="error">*</span><br>
+<input type="text" style="width:700px;" name="org"  class="form-control" value="" placeholder="Name of your College/Institute/University/Organization."required="">
+<br><br>
+</div>
+<div class="form-group">
+<label for="discipline">Which is your primary discipline?</label><span class="error">*</span><br>
+<input type="text" style="width:700px;" name="discipline" class="form-control" value="" placeholder="Example: Mechanical Engineering, Nanotechnology, Biomedical, Mathematics etc."required="">
+
+<br><br>
+</div>
+<label>Which of the following best describes your current work?</label> <span class="error">*</span><br>
+<div class="radio"><label><input type="radio" required name="occ" checked="true"  value="Studying">Studying<br></label></div>
+<div class="radio"><label><input type="radio" required  name="occ"  value="Teaching">Teaching<br></label></div>
+<div class="radio"><label><input type="radio" required name="occ"   value="Research">Research<br></label></div>
+<div class="radio"><label><input type="radio" required name="occ"  value="Industry">Industry<br></label></div>
+<div class="radio"><label><input type="radio" required name="occ"   value="other">Other <input type="text" name="occ-other"></input></label></div>
+
+<br>
+<div class="form-group">
+<label>Experiment Performed </label><span class="error">* </span><br>
+<select class="form-control" name="exp"  required>
+<option value="Choose" disabled>Choose</option>
+<option value="Free Vibration Of Cantilever Beam">Pelton Wheel Constant Head</option>
+</select>
+
+</div>
+<br>
+<label>Please tell your agreement with the following </label><span class="error">* </span><br>
+<table style="width:100%; margin:0">
+<tr>
+<td></td>
+<td style="text-align:center; width:70px">Excellent</td>    
+<td style="text-align:center; width:70px">Very Good</td>
+<td style="text-align:center; width:70px">Good</td>
+<td style="text-align:center; width:70px">Average</td>
+<td style="text-align:center; width:70px">Needs Improvement</td>
+</tr>
+<tr>
+<td>To what degree was the actual lab environment simulated</td>
+
+<td style="text-align:center;">   <div class="radio"><label><input type="radio" checked="true"  required name="rea"  value="5"></label></div></td>    
+<td style="text-align:center;">   <div class="radio"><label><input type="radio" required  name="rea"  value="4"></label></div></td>
+<td style="text-align:center;">   <div class="radio"><label><input type="radio"required name="rea"   value="3"></label></div></td>
+<td style="text-align:center;">   <div class="radio"><label><input type="radio" required name="rea"  value="2"></label></div></td>
+<td style="text-align:center;">   <div class="radio"><label><input type="radio" required name="rea"  value="1"></label></div></td>
+</tr>
+<tr>
+<td>The theory and procedure were found to be helpful</td>
+<td style="text-align:center;"> <div class="radio"><label><input type="radio"required checked="true"  name="tnp"  value="5"></label></div></td>    
+<td style="text-align:center;"> <div class="radio"><label><input type="radio"required  name="tnp"   value="4"></label></div></td>
+<td style="text-align:center;"> <div class="radio"><label><input type="radio"required  name="tnp"   value="3"></label></div></td>
+<td style="text-align:center;"> <div class="radio"><label><input type="radio"required name="tnp"  value="2"></label></div></td>
+<td style="text-align:center;"> <div class="radio"><label><input type="radio"required name="tnp"   value="1"></label></div></td>
+</tr>
+<tr>
+<td>The results of simulation/experiment were easily interpretable</td>
+<td style="text-align:center;"> <div class="radio"><label><input type="radio" checked="true"  required name="eas"  value="5"></label></div></td>    
+<td style="text-align:center;"> <div class="radio"><label><input type="radio"required name="eas"   value="4"></label></div></td>
+<td style="text-align:center;"> <div class="radio"><label><input type="radio"required name="eas"  value="3"></label></div></td>
+<td style="text-align:center;"> <div class="radio"><label><input type="radio"required name="eas"  value="2"></label></div></td>
+<td style="text-align:center;"> <div class="radio"><label><input type="radio"required name="eas"   value="1"></label></div></td>
+</tr>
+</table>
+<br>
+<div class="form-group">
+<label for="help">How helpful do you feel the system is?</label>
+<br><input type="text" style="width:700px;" class="form-control"name="help" value="">
+<br><br>
+</div>
+<label>Please answer the following questions</label><span class="error">* </span><br>
+<table style="width:100%; border:none; margin:0">
+<tr>
+<td></td>
+<td>Yes</td>    
+<td>No</td>
+</tr>
+<tr>
+<td>Did you get the feel of actual lab while performing the simulation/experiments</td>
+<td> <div class="radio"><label><input type="radio"required name="a" checked="true"  value="Y"></label></div></td>    
+<td> <div class="radio"><label><input type="radio"required name="a"  value="N"></label></div></td>
+</tr>
+<tr>
+<td>Did you read the theory and procedure before performing the simulation/experiments</td>
+<td> <div class="radio"><label><input type="radio"required name="b" checked="true"  value="Y"></label></div></td>    
+<td> <div class="radio"><label><input type="radio"required name="b"   value="N"></label></div></td>
+</tr>
+
+<tr>
+<td>Could you conduct the simulation/experiment successfully</td>
+<td> <div class="radio"><label><input type="radio"required name="c" checked="true"  value="Y"></label></div></td>    
+<td> <div class="radio"><label><input type="radio"required name="c" value="N"></label></div></td>
+</tr>
+<tr>
+<td>Could you compare your results with the given typical results in explore</td>
+<td> <div class="radio"><label><input type="radio"required name="d" checked="true"  value="Y"></label></div></td>    
+<td> <div class="radio"><label><input type="radio"required name="d"   value="N"></label></div></td>
+</tr>
+<tr>
+<td>Do you think performing experiments through virtual labs are more challenging than the real experiments</td>
+<td> <div class="radio"><label><input type="radio"required name="e"  checked="true"  value="Y"></label></div></td>    
+<td> <div class="radio"><label><input type="radio"required name="e"   value="N"></label></div></td>
+</tr>
+<tr>
+<td>Do you think doing experiments through virtual lab gives scope for more innovative and creative research work</td>
+<td> <div class="radio"><label><input type="radio"required name="f"  checked="true"  value="Y"></label></div></td>    
+<td> <div class="radio"><label><input type="radio"required name="f"  value="N"></label></div></td>
+</tr>
+</table>
+<br><br>
+<div class="form-group">
+<label for="c1">Please mention any problems/difficulties you faced while performing the simulation/experiment. It will help us improve the content for your later visits.</label>
+<br><textarea  name="c1" class="form-control" rows="4" cols="50"></textarea>
+<br><br>
+</div>
+<div class="form-group">
+<label for="c2">What do you find most interesting thing about the simulation/experiment? We would be happy to know what delighted you.</label>
+<br><textarea name="c2" class="form-control" rows="4" cols="50"></textarea>
+<br><br>
+</div>
+<div class="form-group">
+<label for="c2">Is there anything else that you would like to tell us ?</label>
+<br><textarea name="c3"class="form-control"  rows="4" cols="50"></textarea>
+<br><br>
+</div>
+<button type="submit" name="submit"  class="btn btn-default" value="Submit"> Submit </button>
+</form>
+
+
+<!-- Custom form complete -->
+
+</div>
+	
+</section>
+               
+            </div>
+        </article>
+    </div>
+</body>
+</html>

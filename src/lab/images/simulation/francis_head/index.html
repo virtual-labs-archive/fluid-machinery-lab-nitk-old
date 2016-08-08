@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+
+<title>SOLVE</title>
+<link rel="stylesheet" href="fran.css" />
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>-->
+<script type="text/javascript" src= "jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src= "fran.js"></script>
+
+<script>
+var simsubscreennum=0;
+var temp=0;
+var values=[[1950,1,0.5,0.77,2.6,10.05,7.45,0.0181,2485.85,157.31,6.33,3.01,521.16,0.0048],
+			[1750,3,1.5,2.21,2.6,10.25,7.65,0.0188,2581.99,405.19,15.69,7.74,467.71,0.005],
+			[1600,5,2.5,3.67,2.6,10.6,8,0.0201,2760.53,615.19,22.29,11.75,427.62,0.0054],
+			[1340,7,3.5,5.15,2.6,10.8,8.2,0.0209,2870.41,722.99,25.19,13.81,358.13,0.0056],
+			[1110,9,4.5,6.62,2.6,11.06,8.46,0.0219,3007.75,769.85,25.6,14.7,296.66,0.0059],
+			[970,10,5,7.35,2.6,11.1,8.5,0.022,3021.48,746.93,24.72,14.26,259.24,0.0059],
+			[800,11,5.5,8.1,2.6,11.19,8.59,0.0224,3076.42,678.89,22.07,12.97,213.81,0.006],]
+			
+var lnth=values.length;
+var lnt=0;
+
+</script>
+</head>
+
+
+
+<body style="margin:0">
+<!--Simulation Screen start		-->
+<div id="simscreen">
+
+<!--Title of Simulation		-->
+<div id="title"><h3>FRANCIS TURBINE - CONSTANT HEAD</h3></div>
+
+<!--SubScreen Home	-->	
+<div class="simsubscreen" id="canvas0">
+<h4 class="incanvas" >Objective</h4>
+<p class="incanvas" >To conduct the performance test on Francis turbine under constant head.</p>
+<h4 class="incanvas" >Apparatus used:</h4>
+<p class="incanvas" >Francis turbine set up with centrifugal pump, pressure gauges, spring balance with weights etc.</p>
+<img id="" style="position: absolute; left: 80px; top: 125px;" src="Images/1.png"/>
+</div>
+
+
+
+
+<!--Step1	-->	
+<div class="simsubscreen" id="canvas1" style="visibility:hidden">
+<strong id="titlestep" class="incanvas">STEP </strong><span class="circlebg" id="stepnumber" >&nbsp;1&nbsp;</span><p id="pumptext" class="steptext"> Start the pump by pressing the start button.</p>
+<img id="can1-1" style="position: absolute; left: 120px; top: 125px;" src="Images/8.1.png"/>
+
+<img id="can1on" style="position: absolute; left: 140px; top: 232px;" src="Images/on.png"/>
+<img id="can1-3" style="position: absolute; left: 140px; top: 250px;" src="Images/off.png"/>
+
+<img id="onarm" src="Images/hand.png" style="position:absolute;"/>
+
+
+
+</div>
+
+<!--Step2	-->	
+<div class="simsubscreen" id="canvas2" style="visibility:hidden">
+<strong id="titlestep" class="incanvas">STEP &nbsp;</strong><span class="circlebg" id="stepnumber" >&nbsp;2&nbsp;</span><p id="pumptext" class="steptext">&nbsp;Open the inlet valve to keep the pressure constant.</p>
+<img id="can2-1" style="position: absolute; left: 30px; top: 125px;" src="Images/1.1.png"/>
+<img id="can2-2" style="position: absolute; left: 152px; top: 187px;" src="Images/hand-1.png"/>
+<img id="can2-3" style="position: absolute; left: 530px; top: 125px;" src="Images/supply head.png"/>
+<img id="can2-4" style="position: absolute; left: 585px; top: 198px;" src="Images/arrow.png"/>
+
+<p id="can2-5" style="position:absolute;top: 460px; left:360px"> Constant Head = </p>
+
+</div>
+
+<!--Step3	-->	
+<div class="simsubscreen" id="canvas3" style="visibility:hidden">
+<strong class="incanvas" >STEP &nbsp;</strong><span class="circlebg">&nbsp;3&nbsp;</span><p class="steptext">&nbsp;Apply the weight on the pan and note the spring balance reading.</p>
+<img id="can3-1" style="position: absolute; left: 30px; top: 125px;" src="Images/1.1.png"/>
+<img id="can3-2" style="position: absolute; left: 530px; top: 125px;" src="Images/3.1.png"/>
+<img id="can3-3" style="position: absolute; left: 473px; top: 218px;" src="Images/3.2.png"/>
+
+<p id="can3-4" style="position:absolute;top: 370px; left:370px"> Dead weight of the pan =</p>
+<p id="can3-5" style="position:absolute;top: 400px; left:370px"> Spring balance reading = </p>
+<p id="can3-6" style="position:absolute;top: 430px; left:370px"> Torque =  </p>
+
+</div>
+
+
+<!--Step4	-->	
+<div class="simsubscreen" id="canvas4" style="visibility:hidden">
+<strong class="incanvas" >STEP &nbsp;</strong><span class="circlebg">&nbsp;4&nbsp;</span><p class="steptext">&nbsp;Insert the tachometer to note the speed of the motor.</p>
+<img id="can4-1" style="position: absolute; left: 30px; top: 125px;" src="Images/1.1.png"/>
+<img id="can4-2" style="position: absolute; left: 500px; top: 125px;" src="Images/11.1.png"/>
+<img id="can4-3" style="position: absolute; left: 675px; top: 173px;" src="Images/11.png"/>
+<p id="can4-4" style="position:absolute;top: 460px; left:360px"> Speed of motor = </p>
+</div>
+
+<!--Step5	-->	
+<div class="simsubscreen" id="canvas5" style="visibility:hidden">
+<strong class="incanvas" >STEP &nbsp;</strong><span class="circlebg">&nbsp;5&nbsp;</span><p class="steptext">&nbsp;Take the hook gauge reading to find the discharge.</p>
+<img id="can5-1" style="position: absolute; left: 50px; top: 125px;" src="Images/stp4.png"/>
+<img id="can5-5" style="position: absolute; left: 250px; top: 355px;" src="Images/coverblue.png"/>
+<img id="can5-13" style="position: absolute; left: 250px; top: 375px;" src="Images/coverblue.png"/>
+<img id="can5-2" style="position: absolute; left: 250px; top: 195px;" src="Images/hookgauge4.png"/>
+
+<img id="can5-3" style="position: absolute; left: 295px; top: 109px;" src="Images/hookgauge2.png"/>
+
+<img id="can5-4" style="position: absolute; left: 250px; top: 45px;" src="Images/cover2.png"/>
+
+<img id="can5-6" style="position: absolute; left: 250px; top: 375px;" src="Images/cover.png"/>
+<img id="can5-7" style="position: absolute; left: 119px; top: 185px;cursor:crosshair;" src="Images/nob.png"/>
+
+
+
+<p id="can5-9" style="position:absolute;top: 260px; left:370px"> Initial reading (water level till crest) =</p>
+<p id="can5-10" style="position:absolute;top: 290px; left:370px"> Final reading = </p>
+<p id="can5-11" style="position:absolute;top: 320px; left:370px"> Head of water =  </p>
+<p id="can5-12" style="position:absolute;top:350px; left:370px"> Actual discharge, Q<sub>act</sub> =  </p>
+
+
+</div>
+
+
+<!--Step6	-->	
+<div class="simsubscreen" id="canvas6" style="visibility:hidden">
+<strong class="incanvas" style="position:absolute;top: 30px; left:50px" ><h2>Observation</h2></strong>
+<p id="can6-1" style="position:absolute;top: 80px; left:220px">  Length of the channel, L = 0.47 m  </p>
+<p id="can6-2" style="position:absolute;top: 110px; left:220px"> Radius of brake drum, r = 0.15 m  </p>
+<p id="can6-3" style="position:absolute;top: 140px; left:220px"> Co-efficient of discharge, C<sub>d</sub> = 0.64  </p>
+<p id="can6-4" style="position:absolute;top: 170px; left:220px"> Elevation difference, z = 0.45 m </p>
+
+<strong class="incanvas" style="position:absolute;top: 250px; left:50px" ><h2>Result</h2></strong>
+
+<p id="can6-5" style="position:absolute;top: 300px; left:220px"> Input power =  </p>
+<p id="can6-6" style="position:absolute;top: 330px; left:220px"> Output power =  </p>
+<p id="can6-7" style="position:absolute;top: 360px; left:220px"> Efficiency =   </p>
+<p id="can6-8" style="position:absolute;top: 390px; left:220px"> Unit power =   </p>
+<p id="can6-9" style="position:absolute;top: 420px; left:220px"> Unit speed =   </p>
+<p id="can6-10" style="position:absolute;top: 450px; left:220px"> Unit discharge =  </p>
+
+</div>
+<!--Step7	-->	
+<div class="simsubscreen" id="canvas7" style="visibility:hidden">
+
+<strong class="incanvas" ><h2>Characteristic Curves</h2></strong>
+<span id="step7text1" style="border: 2px solid; position:absolute;top: 90px; left:40px;cursor:pointer" onclick=" document.getElementById('graph').src='Images/CH_1.png'" >&nbsp;&nbsp;Efficiency vs Unit Speed&nbsp;&nbsp;</span>
+<span id="step7text2" style="border: 2px solid; position:absolute;top: 90px; left:240px;cursor:pointer" onclick=" document.getElementById('graph').src='Images/CH_2.png'">&nbsp;&nbsp;Unit Power vs Unit Speed&nbsp;&nbsp;</span>
+<span id="step7text3" style="border: 2px solid; position:absolute;top: 90px; left:440px;cursor:pointer" onclick=" document.getElementById('graph').src='Images/CH_3.png'">&nbsp;&nbsp;Unit Discharge vs Unit Speed&nbsp;&nbsp;</span>
+<img id="graph" style="position:absolute; top:200px; left:100px" src="Images/CH_1.png" />
+
+
+
+</div>
+
+<!--Blinking Arrow	-->	
+<img class ="" id="arrow1" style="visibility:hidden" src="Images/arrow1.png"/>
+
+<!--Trial text	-->
+<div id="">	
+<p id="trial" style="text-transform: uppercase;visibility :hidden;font-weight: bold;"><strong>Trial = </strong></p>
+</div>
+
+
+<!--next or previous	-->	
+<div id="nav">
+<img id="nextButton" onclick="navNext(); " src="Images/Next.png" />
+<img id="nextButton1" onclick="navNext(); " src="Images/Next.png" style="visibility:hidden;" />
+
+</div>
+
+<div id="copyright"> &copy; 2015 SOLVE - The Virtual Lab @ NITK Surathkal, Department of Applied Mechanics & Hydraulics</div>
+
+
+</div>
+</body>
+</html>

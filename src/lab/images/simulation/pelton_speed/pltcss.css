@@ -1,0 +1,261 @@
+#simscreen
+{
+position: relative;
+left:0px;
+top:0px;
+height: 600px; 
+width:800px;
+border:solid 1px;
+}
+
+#copyright{
+position: absolute;
+left:50px;
+top: 580px;
+font-family: verdana; 
+font-size:12px
+}
+
+#title{
+position:relative;
+left: 0px;
+top: 0px;
+height:40px;
+font-size: 24px;
+text-align:center;
+background-color: black;
+font-family: verdana;
+color: White;
+text-transform: uppercase; 
+}
+
+#title h3{
+padding-top:2px;
+margin:0px;}
+
+.simsubscreen
+{
+position:absolute;
+left: 50px;
+top: 50px;
+height:530px;
+width:745px;
+
+}
+
+.incanvas
+{
+margin:5px 0 0 5px;
+padding:0;
+}
+#nextButton{
+    position: absolute;
+    left: 750px;
+    top: 530px;
+cursor:pointer;
+}
+#nextButton1{
+    position: absolute;
+    left: 750px;
+    top: 530px;
+cursor:pointer;
+}
+
+#prevButton{
+    position: absolute;
+    left: 0px;
+    top: 532px;
+cursor:pointer;
+}
+
+
+.steptext{
+display:inline;}
+
+.steptext-6{
+display:inline;}
+
+.steptext-2{display:inline;}
+
+.circlebg
+{
+border-radius:100%;
+font-size:25px;
+color:#fff;
+text-align:center;
+background:#000
+}
+
+/* -------------------------------------- water ---------------------------------------- */
+/* Chrome, Safari, Opera */
+@-webkit-keyframes water-4 {
+0% {-webkit-transform: translate(0, 0 );}
+100% {-webkit-transform: translate(0, -20px );}
+}
+
+/* Standard syntax */
+@keyframes water-4 {
+    0% {transform: translate(0, 0);}
+    100% {transform: translate(0, -20px);}
+}
+
+@-webkit-keyframes water-5 {
+0% {-webkit-transform: translate(0, 0 );}
+100% {-webkit-transform: translate(0, -35px );}
+}
+
+/* Standard syntax */
+@keyframes water-5 {
+    0% {transform: translate(0, 0);}
+    100% {transform: translate(0, -35px);}
+}
+/* -------------------------------------- constant speed arrow ---------------------------------------- */
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes arrow-1 {
+0% {-webkit-transform: rotate(0deg);}    
+100% {-webkit-transform: rotate(50deg);}
+}
+
+/* Standard syntax */
+@keyframes arrow-1 {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(50deg);}
+}
+/* -------------------------------------- constant speed arrow 2 ---------------------------------------- */
+/* Chrome, Safari, Opera */
+@-webkit-keyframes arrow-11 {
+0% {-webkit-transform: rotate(0deg);}    
+100% {-webkit-transform: rotate(50deg);}
+}
+
+/* Standard syntax */
+@keyframes arrow-11 {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(50deg);}
+}
+
+
+
+/* -------------------------------------- spring balance meter ---------------------------------------- */
+/* Chrome, Safari, Opera */
+@-webkit-keyframes springreading {
+0% {-webkit-transform: rotate(0deg);}    
+100% {-webkit-transform: rotate(25deg);}
+}
+
+/* Standard syntax */
+@keyframes springreading {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(25deg);}
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes springreading_1 {
+0% {-webkit-transform: rotate(0deg);}    
+100% {-webkit-transform: rotate(10deg);}
+}
+
+/* Standard syntax */
+@keyframes springreading_1 {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(10deg);}
+}
+/* -------------------------------------- ---------------------------------------- */
+@-webkit-keyframes spring {
+0% {-webkit-transform: rotate(0deg);}    
+100% {-webkit-transform: rotate(-85deg);}
+}
+
+/* Standard syntax */
+@keyframes spring {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(-85deg);}
+}
+
+
+
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes water {
+0% {-webkit-transform: translate(0, -10px );}
+100% {-webkit-transform: translate(0, -22px );}
+}
+
+/* Standard syntax */
+@keyframes water {
+    0% {transform: translate(0, -10px);}
+    100% {transform: translate(0, -22px);}
+}
+/* Chrome, Safari, Opera */
+@-webkit-keyframes water0 {
+0% {-webkit-transform: translate(0px, 0 );}
+100% {-webkit-transform: translate(80px, 0 );}
+}
+
+/* Standard syntax */
+@keyframes water0 {
+    0% {transform: translate(0, 0);}
+    100% {transform: translate(80px, 0);}
+}
+/*--------------------------------------tacho-------------- */
+/* Chrome, Safari, Opera */
+@-webkit-keyframes tacho {
+0% {-webkit-transform: translate(0px, 0 );}
+100% {-webkit-transform: translate(-100px, 0 );}
+}
+
+/* Standard syntax */
+@keyframes tacho {
+    0% {transform: translate(0, 0);}
+    100% {transform: translate(-100px, 0);}
+}
+@-webkit-keyframes tacho-2 {
+0% {-webkit-transform: translate(0px, 0 );}
+100% {-webkit-transform: translate(-50px, 0 );}
+}
+
+/* Standard syntax */
+@keyframes tacho-2 {
+    0% {transform: translate(0, 0);}
+    100% {transform: translate(-50px, 0);}
+}
+
+
+/*-----------------------------------------hook gauge----------------------- */
+/* Chrome, Safari, Opera */
+@-webkit-keyframes myhook-1 {
+0% {-webkit-transform: translate(0, 0 );}
+50% {-webkit-transform: translate(0, -15px );}
+
+100% {-webkit-transform: translate(0, 8px );}
+}
+
+/* Standard syntax */
+@keyframes myhook-1 {
+    0% {transform: translate(0, 0);}
+	50% {transform: translate(0, -15px);}
+	
+	
+    100% {transform: translate(0, 8px);}
+}
+
+@-webkit-keyframes myhook-2 {
+0% {-webkit-transform: translate(0, 0 );}
+50% {-webkit-transform: translate(0, -50px );}
+
+100% {-webkit-transform: translate(0, -15px );}
+}
+
+/* Standard syntax */
+@keyframes myhook-2 {
+    0% {transform: translate(0, 0px);}
+	50% {transform: translate(0, -50px);}
+	
+	
+    100% {transform: translate(0, -15px);}
+}
+
+
+/*-----------------------------------------blink----------------------- */
+
