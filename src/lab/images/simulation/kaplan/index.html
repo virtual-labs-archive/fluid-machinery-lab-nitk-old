@@ -9,14 +9,58 @@
 <script type="text/javascript" src= "jquery-1.7.1.min.js"></script>
 <script type="text/javascript" src= "kpln.js"></script>
 
+<script type="text/javascript" src= "jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src= "jquery-2.1.4.js"></script>
+<script type="text/javascript" src= "ej.web.all.js"></script>
+
 <script>
 var simsubscreennum=0;
 var temp=0;
 var lnt=0;
-var values=[[2775,5.42,20.48,15.06,0.0653,1,0,1.49,3265.4,433.28,1228.8,0.0291,37.6,13.28],
-			[2725,5.42,20.4,14.98,0.06481,2,1,1.49,3239.5,425.5,1206.7,0.0287,36.95,13.14],
-			[2675,5.42,20.2,14.78,0.0628,3,1,2.98,3139.5,819.7,1184.5,0.0278,71.2,26.1],
-			[2575,5.42,20.11,14.69,0.0629,4,1.2,4.18,3145.9,1125.79,1140.23,0.02784,97.75,35.8],]
+var values=[
+			[
+			[2775,5.42,20.05,14.63,0.064,1,0,1.472,3201.98,427.54,1228.79,0.0283,37.121,13.352],
+			[2725,5.42,19.8,14.38,0.0624,2,0.6,2.06,3121.93,587.55,1206.65,0.0276,51.014,18.82],
+			[2660,5.42,19.4,13.98,0.0598,3,1,2.943,2991.85,819.37,1177.87,0.0265,71.142,27.387],
+			[2575,5.42,19,13.58,0.0572,4,1.2,4.12,2861.77,1110.41,1140.23,0.0253,96.411,38.802],
+			],
+			
+			[
+			[2760,5.2,19.95,14.75,0.0648,1,0,1.472,3242.01,425.23,1222.15,0.0287,36.921,13.116],
+			[2710,5.2,19.6,14.4,0.0625,2,0.5,2.207,3126.94,626.01,1200.01,0.0277,54.353,20.02],
+			[2625,5.2,19.3,14.1,0.0606,3,0.9,3.09,3031.88,848.98,1162.37,0.0268,73.713,28.002],
+			[2525,5.2,19.1,13.9,0.0593,4,1.2,4.12,2966.84,1088.85,1118.09,0.0263,94.539,36.701],
+			],
+			
+			[
+			[2750,5.2,20,14.8,0.0651,1,0.1,1.324,3257.02,381.09,1217.72,0.0288,33.088,11.701],
+			[2670,5.2,19.6,14.4,0.0625,2,0.6,2.06,3126.94,575.69,1182.3,0.0277,49.984,18.411],
+			[2560,5.2,19.4,14.2,0.0612,3,1,2.943,3061.9,788.57,1133.59,0.0271,68.468,25.754],
+			[2480,5.2,19.2,14,0.0599,4,1.3,3.973,2996.86,1031.28,1098.16,0.0265,89.541,34.412],
+			],
+			
+			[
+			[2735,5.1,20.1,15,0.0664,1,0.1,1.324,3322.06,379.01,1211.08,0.0294,32.908,11.409],
+			[2645,5.1,19.7,14.6,0.0638,2,0.5,2.207,3191.98,610.99,1171.23,0.0283,53.049,19.141],
+			[2540,5.1,19.4,14.3,0.0618,3,1.1,2.796,3091.92,743.33,1124.73,0.0274,64.54,24.041],
+			[2430,5.1,19.1,14,0.0599,4,1.4,3.826,2996.86,973.1,1076.02,0.0265,84.489,32.471],
+			],
+			
+			[
+			[2690,5.1,19.9,14.8,0.0651,1,0.2,1.177,3257.02,331.39,1191.15,0.0288,28.773,10.175],
+			[2580,5.1,19.6,14.5,0.0632,2,0.5,2.207,3161.96,595.98,1142.44,0.028,51.746,18.848],
+			[2480,5.1,19.2,14.1,0.0606,3,1.2,2.649,3031.88,687.61,1098.16,0.0268,59.702,22.679],
+			[2320,5.1,19,13.9,0.0593,4,1.5,3.679,2966.84,893.36,1027.31,0.0263,77.566,30.111],
+			],
+			
+			[
+			[2253,5.1,20.7,15.6,0.0705,1,0.2,1.177,3527.19,277.55,997.65,0.0312,24.098,7.869],
+			[2137,5.1,20.4,15.3,0.0684,2,0.7,1.913,3422.12,427.89,946.28,0.0303,37.152,12.504],
+			[2035,5.1,20,14.9,0.0658,3,1.1,2.796,3292.04,595.54,901.11,0.0291,51.708,18.09],
+			[1934,5.1,19.5,14.4,0.0625,4,1.3,3.973,3126.94,804.24,856.39,0.0277,69.828,25.72],
+			]
+			
+			]
 
 
 </script>
@@ -46,12 +90,29 @@ var values=[[2775,5.42,20.48,15.06,0.0653,1,0,1.49,3265.4,433.28,1228.8,0.0291,3
 <!--Step1	-->	
 
 <div class="simsubscreen" id="canvas1" style="visibility:hidden">
-<strong id="titlestep" class="incanvas">STEP </strong><span class="circlebg" id="stepnumber" >&nbsp;1&nbsp;</span><p id="pumptext" class="steptext"> Start the pump by pressing the start button.</p>
+<strong id="titlestep" class="incanvas">STEP </strong><span class="circlebg" id="stepnumber" >&nbsp;1&nbsp;</span><p id="pumptext" class="steptext"> Start the pump by pressing the start button and select the head.</p>
 <img id="can1-1" style="position: absolute; left: 10px; top: 130px;" src="Images/1.1.png"/>
 <img id="can1-2" style="position: absolute; left: 600px; top: 125px;" src="Images/board.png"/>
 <img id="can1on" style="position: absolute; left: 635px; top: 160px;" src="Images/on.png"/>
 <img id="can1off" style="position: absolute; left: 635px; top: 185px;" src="Images/off.png"/>
 <img id="onarm" src="Images/hand.png" style="position:absolute;"/>
+
+<form name="can1-form" id="can1-form"style="position:absolute;top: 320px; left:500px;  visibility:hidden;">
+<label>Select the head</label>&nbsp;&nbsp;
+  <select name="can1-select" id="can1-select">
+    <option value="5">5</option>
+	<option value="5.5">5.5</option>
+	<option value="6">6</option>
+	<option value="6.5">6.5</option>
+	<option value="7">7</option>
+	<option value="7.5">7.5</option>
+	
+    
+  </select>
+  <label>&nbsp;&nbsp;m</label>
+  <br><br>
+  <button type="button" id="can1-ok">OK</button>
+</form>
 
 </div>
 
@@ -95,7 +156,7 @@ var values=[[2775,5.42,20.48,15.06,0.0653,1,0,1.49,3265.4,433.28,1228.8,0.0291,3
 
 <!--Step5	-->	
 <div class="simsubscreen" id="canvas5" style="visibility:hidden">
-<strong class="incanvas" >STEP &nbsp;</strong><span class="circlebg">&nbsp;5&nbsp;</span><p class="steptext">&nbsp;Note the V- notch reading to find the discharge.</p>
+<strong class="incanvas" >STEP &nbsp;</strong><span class="circlebg">&nbsp;5&nbsp;</span><p class="steptext">&nbsp;Note the Rectangular notch reading to find the discharge.</p>
 <img id="can5-1" style="position: absolute; left: 50px; top: 125px;" src="Images/stp4.png"/>
 <img id="can5-5" style="position: absolute; left: 250px; top: 355px;" src="Images/coverblue.png"/>
 <img id="can5-13" style="position: absolute; left: 250px; top: 375px;" src="Images/coverblue.png"/>
@@ -118,7 +179,7 @@ var values=[[2775,5.42,20.48,15.06,0.0653,1,0,1.49,3265.4,433.28,1228.8,0.0291,3
 <strong class="incanvas" style="position:absolute;top: 30px; left:50px" ><h2>Observation</h2></strong>
 <p id="can6-1" style="position:absolute;top: 80px; left:220px">  Length of the channel, L = 0.47 m  </p>
 <p id="can6-2" style="position:absolute;top: 110px; left:220px"> Radius of brake drum, r = 0.15 m  </p>
-<p id="can6-3" style="position:absolute;top: 140px; left:220px"> Input power = Co-efficient of discharge, C<sub>d</sub> = 0.64  </p>
+<p id="can6-3" style="position:absolute;top: 140px; left:220px"> Co-efficient of discharge, C<sub>d</sub> = 0.6  </p>
 <p id="can6-4" style="position:absolute;top: 170px; left:220px"> Elevation difference, z = 0.45 m </p>
 
 <strong class="incanvas" style="position:absolute;top: 250px; left:50px" ><h2>Result</h2></strong>
@@ -136,12 +197,18 @@ var values=[[2775,5.42,20.48,15.06,0.0653,1,0,1.49,3265.4,433.28,1228.8,0.0291,3
 
 <!--Step7	-->	
 <div class="simsubscreen" id="canvas7" style="visibility:hidden">
-
-<strong class="incanvas" ><h2>Characteristic Curves</h2></strong>
+<center><h2>Characteristic Curves<h2></center></p>
+<span id="step7text1" style="border: 2px solid; position:absolute;top:60px; left:40px;cursor:pointer;">&nbsp;&nbsp;Unit Power vs Unit Speed&nbsp;&nbsp;</span>
+<span id="step7text2" style="border: 2px solid; position:absolute;top: 60px; left:245px;cursor:pointer;">&nbsp;&nbsp;Efficiency vs Unit Speed&nbsp;&nbsp;</span>
+<span id="step7text3" style="border: 2px solid; position:absolute;top: 60px; left:440px;cursor:pointer;">&nbsp;&nbsp;Unit Discharge vs Unit Speed&nbsp;&nbsp;</span>
+<div id="chartContainer" style="height: 420px; width: 600px;margin-left:25px;margin-right:100px;margin-top:50px"></div>
+<!--
 <span id="step7text1" style="border: 2px solid; position:absolute;top: 90px; left:40px;cursor:pointer" onclick=" document.getElementById('graph').src='Images/G_1.png'" >&nbsp;&nbsp;Unit Power vs Unit Speed&nbsp;&nbsp;</span>
 <span id="step7text2" style="border: 2px solid; position:absolute;top: 90px; left:240px;cursor:pointer" onclick=" document.getElementById('graph').src='Images/G_2.png'">&nbsp;&nbsp;Efficiency vs Unit Speed&nbsp;&nbsp;</span>
 <span id="step7text3" style="border: 2px solid; position:absolute;top: 90px; left:455px;cursor:pointer" onclick=" document.getElementById('graph').src='Images/G_3.png'">&nbsp;&nbsp;Actual Discharge vs Output Power&nbsp;&nbsp;</span>
 <img id="graph" style="position:absolute; top:200px; left:100px" src="Images/G_1.png" />
+-->
+
 </div>
 	
 	

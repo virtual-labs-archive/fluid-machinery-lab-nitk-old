@@ -58,7 +58,7 @@ var quizJSON = {
             ],
            
             "correct": "<p><span>Right answer</span> </p>",
-            "incorrect": "<p><span>wrong</span> It's wrong,<br>Ans: Roller support</p>" // no comma here
+            "incorrect": "<p><span>wrong</span> It's wrong,<br>Ans: True</p>" // no comma here
         },
 		{ // Question 5 - Multiple Choice, Multiple True Answers, Select Any
             "q": "Too high delivery height causes ",

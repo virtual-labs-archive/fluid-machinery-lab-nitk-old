@@ -54,8 +54,8 @@ var quizJSON = {
  
             "a": [
                 
-                {"option": "True",  "correct": true},
-                {"option": "False",          "correct": false} // no comma here
+                {"option": "True",  "correct": false},
+                {"option": "False",          "correct": true} // no comma here
             ],
              "correct": "<p><span>Right answer</span></p>",
             "incorrect": "<p><span>wrong</span> It's wrong,</br> Ans: False</p>" // no comma here

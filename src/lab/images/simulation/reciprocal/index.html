@@ -9,6 +9,11 @@
 <script type="text/javascript" src= "jquery-1.7.1.min.js"></script>
 <script type="text/javascript" src= "SOM.js"></script>
 
+<script type="text/javascript" src= "jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src= "jquery-2.1.4.js"></script>
+<script type="text/javascript" src= "ej.web.all.js"></script>
+
+
 <script>
 var simsubscreennum=0;
 var myInt = setInterval(function(){}, 500);
@@ -184,13 +189,21 @@ var values=[
 
 <!--Step9	-->	
 <div class="simsubscreen" id="canvas9" style="visibility:hidden">
-<strong class="incanvas" ><h2>Characteristic Curve</h2></strong>
+
+<center><h2>Characteristic Curves<h2></center></p>
+<span id="step9text1" style="border: 2px solid; position:absolute;top:60px; left:40px;cursor:pointer;">&nbsp;&nbsp; Actual Discharge vs Head &nbsp;&nbsp;</span>
+<span id="step9text2" style="border: 2px solid; position:absolute;top: 60px; left:240px;cursor:pointer;">&nbsp;&nbsp; Overall Efficiency vs Head &nbsp;&nbsp;</span>
+<span id="step9text3" style="border: 2px solid; position:absolute;top: 60px; left:450px;cursor:pointer;">&nbsp;&nbsp; Input Power vs Head &nbsp;&nbsp;</span>
+<div id="chartContainer" style="height: 420px; width: 600px;margin-left:25px;margin-right:100px;margin-top:50px"></div>
+</div>
+
+<!--
 <span id="step8text1" style="border: 2px solid; position:absolute;top: 90px; left:40px;cursor:pointer" onclick=" document.getElementById('graph').src='png/g1.png'" >&nbsp;&nbsp;Actual Discharge vs Head&nbsp;&nbsp;</span>
 <span id="step8text2" style="border: 2px solid; position:absolute;top: 90px; left:240px;cursor:pointer" onclick=" document.getElementById('graph').src='png/g2.png'">&nbsp;&nbsp;Overall Efficiency vs Head&nbsp;&nbsp;</span>
 <span id="step8text3" style="border: 2px solid; position:absolute;top: 90px; left:440px;cursor:pointer" onclick=" document.getElementById('graph').src='png/g3.png'">&nbsp;&nbsp;Input Power vs Head&nbsp;&nbsp;</span>
 <img id="graph" style="position:absolute; top:200px; left:100px" src="png/g1.png" />
 </div>
-
+-->
 
 
 <!--next or previous	-->	

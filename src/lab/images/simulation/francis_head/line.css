@@ -1,0 +1,35 @@
+label{
+		margin-bottom : -25px !important ;
+		text-align :center !important;
+		}
+        .tooltipDiv {
+            background-color:#E94649;        
+            color: white;
+			width:130px;
+        }
+        #Tooltip >div:first-child {
+            float: left;
+        }
+        #Tooltip #value {
+            float: right;
+            height: 50px;
+            width: 68px;
+        }
+        #Tooltip #value >div {
+            margin: 5px 5px 5px 5px;            
+        }
+        #Tooltip #efpercentage {
+            font-size: 20px;
+            font-family: segoe ui;
+			padding-left: 2px;
+        }
+         #Tooltip #ef {
+            font-size: 12px;
+            font-family: segoe ui;
+        }
+        #eficon {
+            background-image: url("../content/images/chart/eficon.png");
+            height: 60px;           
+            width: 60px;
+            background-repeat: no-repeat;
+        }

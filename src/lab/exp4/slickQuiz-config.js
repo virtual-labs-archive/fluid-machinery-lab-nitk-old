@@ -59,10 +59,10 @@ var quizJSON = {
                 {"option": "Jonual turbine.",          "correct": false} // no comma here
             ],
              "correct": "<p><span>Right answer</span></p>",
-            "incorrect": "<p><span>wrong</span> It's wrong,</br> Ans:  V<sub>f1</sub>= V<sub>f2</sub></p>" // no comma here
+            "incorrect": "<p><span>wrong</span> It's wrong,</br> Ans:  Kaplan turbine" // no comma here
         },
         { // Question 5 - Multiple Choice, Multiple True Answers, Select All
-            "q": "Velocity of runner of a Kaplan turbine at inlet(V<sub>f1</sub>) and outlet (V<sub>f2</sub>) are",
+            "q": "What is the range of Flow ratio for a Kaplan turbine for its most efficient operation?",
  
             "a": [
                 {"option": "0.50 to 0.80",           "correct": false},

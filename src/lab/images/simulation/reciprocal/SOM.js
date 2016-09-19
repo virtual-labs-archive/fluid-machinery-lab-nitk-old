@@ -228,14 +228,14 @@ function magic()
 		refresh1();
 		step8();
 		
-		if(repeat==8)
+		if(repeat==1)
 		{
 			flag=1;
 			mpointer=0;
 			simsubscreennum=0;
 		}
 		
-		else if (repeat <=7)
+		else if (repeat < 1)
 		{
 			flag=1;	
 			simsubscreennum=2;
@@ -245,7 +245,9 @@ function magic()
 	}
 	else(simsubscreennum==9)
 	{
-	
+		document.getElementById('step9text1').onclick=function() { step_9a();}
+		document.getElementById('step9text2').onclick=function() { step_9b();}
+		document.getElementById('step9text3').onclick=function() { step_9c();}
 	}
 	
 }
@@ -313,7 +315,7 @@ function rotateleft()
 		
 	setTimeout(function(){
 	document.getElementById('step4text1').innerHTML="Suction head= "+values[lnth][0]+" mm of Hg";
-	document.getElementById('step4text2').innerHTML="Suction head="+values[lnth][1]+" m of water";
+	document.getElementById('step4text2').innerHTML="Suction head= "+values[lnth][1]+" m of water";
 	document.getElementById('nextButton').style.visibility="visible";
 	}, 3600);
 	
@@ -428,6 +430,184 @@ function stepstop()
 	}
 	
 }
+
+function step_9a()
+{
+	$("#chartContainer").ejChart(
+        {
+		    //Initializing Primary X Axis	
+		    primaryXAxis:
+            {
+			   labelFormat: "{value}",
+                title: { text: 'Head' },
+                range: { min: 0, max: 30, interval: 5 } 
+            },	
+			
+			//Initializing Primary Y Axis	
+            primaryYAxis:
+            {
+                labelFormat: "{value}",
+                title: { text: 'Actual Discharge' },
+                range: { min: 5.0, max: 6.00, interval: 0.100 }
+            },	
+			
+			//Initializing Common Properties for all the series
+           
+            //Initializing Series				
+            series: 
+			[
+			    {
+                points: [
+				{ x: values[0][4], y: values[0][10]},
+				{ x: values[1][4], y: values[1][10]},
+				{ x: values[2][4], y: values[2][10]},
+				{ x: values[3][4], y: values[3][10]},
+				{ x: values[4][4], y: values[4][10]},
+				{ x: values[5][4], y: values[5][10]},
+				{ x: values[6][4], y: values[6][10]},
+				{ x: values[7][4], y: values[7][10]}
+				
+				],
+				type: 'line',
+					fill: "#0066FF",
+					border :{width:5},
+					tooltip:{visible:true},
+					marker:{
+                        shape: 'circle',
+						size:
+                        {
+                            height: 5, width: 5
+                        },
+                        visible: true
+                    },					
+					enableAnimation :true
+                }
+			],
+             load:"loadTheme",
+			isResponsive: true,
+			
+			legend:{visible:false}
+        });
+}
+
+function step_9b()
+{
+	$("#chartContainer").ejChart(
+        {
+		    //Initializing Primary X Axis	
+		    primaryXAxis:
+            {
+			   labelFormat: "{value}",
+                title: { text: 'Head' },
+                range: { min: 0, max: 30, interval: 5 } 
+            },	
+			
+			//Initializing Primary Y Axis	
+            primaryYAxis:
+            {
+                labelFormat: "{value}",
+                title: { text: 'Over All Efficiency' },
+                range: { min: 0, max: 25, interval: 5 }
+            },	
+			
+			//Initializing Common Properties for all the series
+           
+            //Initializing Series				
+            series: 
+			[
+			    {
+                points: [
+				{ x: values[0][4], y: values[0][18]},
+				{ x: values[1][4], y: values[1][18]},
+				{ x: values[2][4], y: values[2][18]},
+				{ x: values[3][4], y: values[3][18]},
+				{ x: values[4][4], y: values[4][18]},
+				{ x: values[5][4], y: values[5][18]},
+				{ x: values[6][4], y: values[6][18]},
+				{ x: values[7][4], y: values[7][18]}
+				
+				],
+				type: 'line',
+					fill: "#0066FF",
+					border :{width:5},
+					tooltip:{visible:true},
+					marker:{
+                        shape: 'circle',
+						size:
+                        {
+                            height: 5, width: 5
+                        },
+                        visible: true
+                    },					
+					enableAnimation :true
+                }
+			],
+             load:"loadTheme",
+			isResponsive: true,
+			
+			legend:{visible:false}
+        });
+}
+
+function step_9c()
+{
+	$("#chartContainer").ejChart(
+        {
+		    //Initializing Primary X Axis	
+		    primaryXAxis:
+            {
+			   labelFormat: "{value}",
+                title: { text: 'Head' },
+                range: { min: 0, max: 30, interval: 5 } 
+            },	
+			
+			//Initializing Primary Y Axis	
+            primaryYAxis:
+            {
+                labelFormat: "{value}",
+                title: { text: 'Input Power' },
+                range: { min: 200, max: 600, interval: 100 }
+            },	
+			
+			//Initializing Common Properties for all the series
+           
+            //Initializing Series				
+            series: 
+			[
+			    {
+                points: [
+				{ x: values[0][4], y: values[0][12]},
+				{ x: values[1][4], y: values[1][12]},
+				{ x: values[2][4], y: values[2][12]},
+				{ x: values[3][4], y: values[3][12]},
+				{ x: values[4][4], y: values[4][12]},
+				{ x: values[5][4], y: values[5][12]},
+				{ x: values[6][4], y: values[6][12]},
+				{ x: values[7][4], y: values[7][12]}
+				
+				],
+				type: 'line',
+					fill: "#0066FF",
+					border :{width:5},
+					tooltip:{visible:true},
+					marker:{
+                        shape: 'circle',
+						size:
+                        {
+                            height: 5, width: 5
+                        },
+                        visible: true
+                    },					
+					enableAnimation :true
+                }
+			],
+             load:"loadTheme",
+			isResponsive: true,
+			
+			legend:{visible:false}
+        });
+}
+
 
 function refresh1()
 {

@@ -9,18 +9,71 @@
 <script type="text/javascript" src= "jquery-1.7.1.min.js"></script>
 <script type="text/javascript" src= "pltjs.js"></script>
 
+
+<script type="text/javascript" src= "jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src= "jquery-2.1.4.js"></script>
+<script type="text/javascript" src= "ej.web.all.js"></script>
+
 <script>
 var simsubscreennum=0;
 var temp=0;
 var lnt=0;
-var values=[[975,1.8,0.6,1.77,0.52,9.78,9.26,0,736.96,180.72,24.52,1.97,216.3,0],
-			[900,2.8,0.9,2.796,0.52,9.78,9.26,0,736.96,263.52,35.76,2.88,199.7,0],
-			[850,3.8,1.2,3.826,0.52,9.78,9.26,0,736.96,340.56,46.21,3.72,188.56,0],
-			[800,4.8,1.6,4.709,0.52,9.78,9.26,0,736.96,394.5,53.53,4.31,177.47,0],
-			[775,5.8,2.4,5.003,0.52,9.78,9.26,0,736.96,406.03,55.1,4.43,171.92,0],
-			[675,6.8,2.9,5.739,0.52,9.78,9.26,0,736.96,405.66,55.04,4.42,149.74,0],
-			[600,7.8,3.1,6.916,0.52,9.78,9.26,0,736.96,434.55,58.96,4.74,133.1,0],
-			[500,8.8,3.2,8.24,0.52,9.78,9.26,0,736.96,431.44,58.54,4.71,110.92,0],]
+var values=[
+			[
+			[1100,1.8,0.8,1.47,0.5,9.1,8.6,0.0031,501.782,61.54,12.26,270.8,0.00076,0.92,1.65],
+			[930,2.8,1.4,2.06,0.5,9.1,8.6,0.0031,501.782,86.25,17.19,228.95,0.00076,1.29,1.65],
+			[880,3.8,2.3,2.21,0.5,9.1,8.6,0.0031,501.782,92.53,18.44,216.64,0.00076,1.38,1.65],
+			[790,4.8,3.1,2.5,0.5,9.1,8.6,0.0031,501.782,104.67,20.86,194.48,0.00076,1.56,1.65],
+			[710,5.8,3.9,2.8,0.5,9.1,8.6,0.0031,501.782,117.23,23.36,174.79,0.00076,1.75,1.65],
+			[680,6.8,4.8,2.94,0.5,9.1,8.6,0.0031,501.782,123.09,24.53,167.4,0.00076,1.84,1.65],
+			[590,7.8,5.5,3.38,0.5,9.1,8.6,0.0031,501.782,141.51,28.2,145.25,0.00076,2.11,1.65],
+			[510,8.8,6.2,3.83,0.5,9.1,8.6,0.0031,501.782,160.35,31.96,125.55,0.00076,2.39,1.65],
+			],
+			
+			[
+			[980,1.8,0.7,1.62,0.5,9.3,8.8,0.0033,566.528,67.82,11.97,234.26,0.00079,0.93,1.75],
+			[900,2.8,1.6,1.77,0.5,9.3,8.8,0.0033,566.528,74.1,13.08,215.14,0.00079,1.01,1.75],
+			[840,3.8,2.5,1.91,0.5,9.3,8.8,0.0033,566.528,79.97,14.12,200.8,0.00079,1.09,1.75],
+			[780,4.8,3.4,2.06,0.5,9.3,8.8,0.0033,566.528,86.25,15.22,186.46,0.00079,1.18,1.75],
+			[700,5.8,4.3,2.21,0.5,9.3,8.8,0.0033,566.528,92.53,16.33,167.33,0.00079,1.26,1.75],
+			[650,6.8,5.2,2.35,0.5,9.3,8.8,0.0033,566.528,98.39,17.37,155.38,0.00079,1.34,1.75],
+			[520,7.8,5.9,2.8,0.5,9.3,8.8,0.0033,566.528,117.23,20.69,124.3,0.00079,1.6,1.75],
+			[410,8.8,6.8,2.94,0.5,9.3,8.8,0.0033,566.528,123.09,21.73,98.01,0.00079,1.68,1.75],
+			],
+			
+			[
+			[960,1.8,1,1.18,0.51,9.7,9.19,0.0036,653.35,49.4,7.56,223.2,0.00084,0.62,1.85],
+			[910,2.8,1.9,1.32,0.51,9.7,9.19,0.0036,653.35,55.26,8.46,211.57,0.00084,0.69,1.85],
+			[860,3.8,2.7,1.62,0.51,9.7,9.19,0.0036,653.35,67.82,10.38,199.95,0.00084,0.85,1.85],
+			[790,4.8,3.5,1.91,0.51,9.7,9.19,0.0036,653.35,79.97,12.24,183.67,0.00084,1.01,1.85],
+			[685,5.8,4.2,2.35,0.51,9.7,9.19,0.0036,653.35,98.39,15.06,159.26,0.00084,1.24,1.85],
+			[605,6.8,5.1,2.5,0.51,9.7,9.19,0.0036,653.35,104.67,16.02,140.66,0.00084,1.32,1.85],
+			[550,7.8,6,2.65,0.51,9.7,9.19,0.0036,653.35,110.95,16.98,127.87,0.00084,1.39,1.85],
+			[490,8.8,6.9,2.8,0.51,9.7,9.19,0.0036,653.35,117.23,17.94,113.92,0.00084,1.47,1.85],
+			],
+			
+			[
+			[1010,1.8,0.9,1.32,0.51,10.2,9.69,0.0041,784.31,55.26,7.05,228.72,0.00093,0.64,1.95],
+			[950,2.8,1.6,1.77,0.51,10.2,9.69,0.0041,784.31,74.1,9.45,215.133,0.00093,0.86,1.95],
+			[910,3.8,2.5,1.91,0.51,10.2,9.69,0.0041,784.31,79.97,10.2,206.074,0.00093,0.93,1.95],
+			[850,,4.8,3.3,2.21,0.51,10.2,9.69,0.0041,784.31,92.53,11.8,192.487,0.00093,1.07,1.95],
+			[750,5.8,4,2.65,0.51,10.2,9.69,0.0041,784.31,110.95,14.15,169.842,0.00093,1.29,1.95],
+			[700,6.8,4.9,2.8,0.51,10.2,9.69,0.0041,784.31,117.23,14.95,158.519,0.00093,1.36,1.95],
+			[620,7.8,5.7,3.09,0.51,10.2,9.69,0.0041,784.31,129.37,16.49,140.402,0.00093,1.5,1.95],
+			[500,8.8,6.5,3.38,0.51,10.2,9.69,0.0041,784.31,141.51,18.04,113.228,0.00093,1.64,1.95],
+			],
+			
+			[
+			[1050,1.8,0.8,1.47,0.5,10.8,10.3,0.0048,965.3,61.54,6.38,231.91,0.0011,0.66,2.05],
+			[990,2.8,1.5,1.91,0.5,10.8,10.3,0.0048,965.3,79.97,8.28,218.65,0.0011,0.86,2.05],
+			[960,3.8,2.3,2.21,0.5,10.8,10.3,0.0048,965.3,92.53,9.59,212.03,0.0011,1,2.05],
+			[950,4.8,3.2,2.35,0.5,10.8,10.3,0.0048,965.3,98.39,10.19,209.82,0.0011,1.06,2.05],
+			[930,5.8,4.1,2.5,0.5,10.8,10.3,0.0048,965.3,104.67,10.84,205.4,0.0011,1.13,2.05],
+			[850,6.8,4.7,3.09,0.5,10.8,10.3,0.0048,965.3,129.37,13.4,187.73,0.0011,1.39,2.05],
+			[800,7.8,5.5,3.38,0.5,10.8,10.3,0.0048,965.3,141.51,14.66,176.69,0.0011,1.52,2.05],
+			[640,8.8,6.3,3.68,0.5,10.8,10.3,0.0048,965.3,154.07,15.96,141.35,0.0011,1.66,2.05],
+			]
+		]
 			
 
 
@@ -52,13 +105,29 @@ var values=[[975,1.8,0.6,1.77,0.52,9.78,9.26,0,736.96,180.72,24.52,1.97,216.3,0]
 <!--Step1	-->	
 
 <div class="simsubscreen" id="canvas1" style="visibility:hidden">
-<strong id="titlestep" class="incanvas">STEP </strong><span class="circlebg" id="stepnumber" >&nbsp;1&nbsp;</span><p id="pumptext" class="steptext"> Start the pump by pressing the start button.</p>
+<strong id="titlestep" class="incanvas">STEP </strong><span class="circlebg" id="stepnumber" >&nbsp;1&nbsp;</span><p id="pumptext" class="steptext"> Start the pump by pressing the start button and select the head.</p>
 
 <img id="can1-1" style="position: absolute; left: 80px; top: 160px;" src="Images/10.1.png"/>
 <img id="can1-2" style="position: absolute; left: 530px; top: 125px;" src="Images/board.png"/>
 <img id="can1on" style="position: absolute; left: 565px; top: 160px;" src="Images/on.png"/>
 <img id="can1off" style="position: absolute; left: 565px; top: 185px;" src="Images/off.png"/>
 <img id="onarm" src="Images/hand.png" style="position:absolute;"/>
+
+<form name="can1-form" id="can1-form"style="position:absolute;top: 320px; left:500px; visibility:hidden;" >
+<label>Select the head</label>&nbsp;&nbsp;
+  <select name="can1-select" id="can1-select">
+    <option value="16.5">16.5</option>
+	<option value="17.5">17.5</option>
+	<option value="18.5">18.5</option>
+	<option value="19.5">19.5</option>
+	<option value="20.5">20.5</option>
+	
+    
+  </select>
+  <label>&nbsp;&nbsp;m</label>
+  <br><br>
+  <button type="button" id="can1-ok">OK</button>
+</form>
 
 </div>
 <!--Step2	-->	
@@ -129,6 +198,7 @@ var values=[[975,1.8,0.6,1.77,0.52,9.78,9.26,0,736.96,180.72,24.52,1.97,216.3,0]
 <p id="can6-1" style="position:absolute;top: 80px; left:220px">  Radius of brake drum, r = 0.15 m  </p>
 <p id="can6-2" style="position:absolute;top: 110px; left:220px"> Initial weight of pan = 1.8 Kg  </p>
 <p id="can6-3" style="position:absolute;top: 140px; left:220px"> Gate opening = 50%</p>
+<p id="can6-4" style="position:absolute;top: 170px; left:220px"> Co-efficient of discharge, C<sub>d</sub> = 0.6 </p>
 
 <strong class="incanvas" style="position:absolute;top: 250px; left:50px" ><h2>Result</h2></strong>
 
@@ -146,11 +216,21 @@ var values=[[975,1.8,0.6,1.77,0.52,9.78,9.26,0,736.96,180.72,24.52,1.97,216.3,0]
 <!--Step7	-->	
 <div class="simsubscreen" id="canvas7" style="visibility:hidden">
 
-<strong class="incanvas" ><h2>Characteristic Curves</h2></strong>
+
+
+<center><h2>Characteristic Curves<h2></center></p>
+<span id="step7text1" style="border: 2px solid; position:absolute;top:60px; left:40px;cursor:pointer;">&nbsp;&nbsp;Efficiency vs Unit Speed&nbsp;&nbsp;</span>
+<span id="step7text2" style="border: 2px solid; position:absolute;top: 60px; left:231px;cursor:pointer;">&nbsp;&nbsp;Unit Power vs Unit Speed&nbsp;&nbsp;</span>
+<span id="step7text3" style="border: 2px solid; position:absolute;top: 60px; left:440px;cursor:pointer;">&nbsp;&nbsp;Unit Discharge vs Unit Speed&nbsp;&nbsp;</span>
+<div id="chartContainer" style="height: 420px; width: 600px;margin-left:25px;margin-right:100px;margin-top:50px"></div>
+
+<!--
 <span id="step7text1" style="border: 2px solid; position:absolute;top: 90px; left:40px;cursor:pointer" onclick=" document.getElementById('graph').src='Images/CH_1.png'" >&nbsp;&nbsp;Efficiency vs Unit Speed&nbsp;&nbsp;</span>
-<span id="step7text2" style="border: 2px solid; position:absolute;top: 90px; left:240px;cursor:pointer" onclick=" document.getElementById('graph').src='Images/CH_2.png'">&nbsp;&nbsp;Unit Power vs Unit Speed &nbsp;&nbsp;</span>
+<span id="step7text2" style="border: 2px solid; position:absolute;top: 90px; left:240px;cursor:pointer" onclick=" document.getElementById('graph').src='Images/CH_2.png'">&nbsp;&nbsp;Efficiency vs Unit Speed&nbsp;&nbsp;</span>
 <span id="step7text3" style="border: 2px solid; position:absolute;top: 90px; left:455px;cursor:pointer" onclick=" document.getElementById('graph').src='Images/CH_3.png'">&nbsp;&nbsp;Unit Discharge vs Unit Speed&nbsp;&nbsp;</span>
 <img id="graph" style="position:absolute; top:200px; left:100px" src="Images/CH_1.png" />
+-->
+
 </div>
 
 <!--Trial text	-->

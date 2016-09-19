@@ -2,6 +2,8 @@
 var mpointer=0;
 var repeat =0;
 var flag=0;
+var x=0;
+var y;
 
 
 function navNext()
@@ -107,8 +109,14 @@ function magic()
 		refresh1();
 		repeat+=1;
 		
+		
+		
+		document.getElementById('can1-form').style.visibility="hidden";
+		
 		document.getElementById('trial').style="visibility:visible ;left: 700px; top: 100px;position: absolute;font-weight: bold;text-transform: uppercase;";
 		document.getElementById('trial').innerHTML="Trial : " + repeat;
+		
+		
 		
 		if(repeat==1)
 		{
@@ -131,10 +139,11 @@ function magic()
 			document.getElementById("arrow1").style.msTransform = "rotate(180deg)"; 
 			document.getElementById("arrow1").style.transform = "rotate(180deg)";
 			
-			document.getElementById('can2-3').style.visibility="visible";
+			document.getElementById('can2-3').style.visibility="hidden";
 			
 			document.getElementById('can2-8').onclick=function() {
 				myStopFunction();
+				document.getElementById('can2-3').style.visibility="visible";
 				
 			document.getElementById("can2-8").style.transformOrigin = "20% 75%";
 			document.getElementById("can2-8").style.animation = "springreading 0.9s forwards ";
@@ -147,6 +156,7 @@ function magic()
 	}
 	else if (simsubscreennum==3)
 	{
+		document.getElementById('can2-3').style.visibility="hidden";
 		document.getElementById('trial').style="visibility:visible ;left: 700px; top: 100px;position: absolute;font-weight: bold;text-transform: uppercase;";
 		document.getElementById('trial').innerHTML="Trial : " + repeat;
 		
@@ -170,7 +180,7 @@ function magic()
 		document.getElementById('trial').style="visibility:visible ;left: 700px; top: 100px;position: absolute;font-weight: bold;text-transform: uppercase;";
 		document.getElementById('trial').innerHTML="Trial : " + repeat;
 		
-		document.getElementById('can5-9').innerHTML="Initial reading (water level till crest) = "+values[lnt][6] +" cm" ;
+		document.getElementById('can5-9').innerHTML="Initial reading (water level till crest) = "+values[x][lnt][6] +" cm" ;
 		myInt = setInterval(function(){ animatearrow(); }, 500);
 			document.getElementById('arrow1').style="visibility:visible ;position:absolute; left: 200px; top: 190px; height: 50px; z-index: 10;";
 			
@@ -195,7 +205,7 @@ function magic()
 			mpointer=0;
 			simsubscreennum=0;
 		}
-		else if (repeat <=7)
+		else if (repeat < 8)
 		{
 			
 				
@@ -209,7 +219,9 @@ function magic()
 	}
 	else (simsubscreennum==7)
 	{
-			
+		document.getElementById('step7text1').onclick=function() { step_7a();}
+		document.getElementById('step7text2').onclick=function() { step_7b();}
+		document.getElementById('step7text3').onclick=function() { step_7c();}	
 	}
 	
 	
@@ -220,7 +232,16 @@ function magic()
 function step1()
 {
 	mpointer=1;
+	
 	document.getElementById('onarm').style.visibility="hidden";
+	document.getElementById('can1-form').style.visibility="visible";
+	
+	document.getElementById('can1-ok').onclick=function() { step1andhalf(); };
+}
+function step1andhalf()
+{
+	x = document.getElementById("can1-select").selectedIndex;
+	y = document.getElementById("can1-select").options;
 	document.getElementById('nextButton').style.visibility="visible";
 }
 
@@ -237,9 +258,9 @@ function step2()
 	
 	
 	setTimeout(function(){
-	document.getElementById('can2-5').innerHTML="Weight on the pan ="+values[lnt][3] +" kg" ;
-	document.getElementById('can2-6').innerHTML="Spring balance reading = "+values[lnt][4] +" kg" ;
-	document.getElementById('can2-7').innerHTML="Torque = "+values[lnt][5] +" N-m" ;
+	document.getElementById('can2-5').innerHTML="Weight on the pan ="+values[x][lnt][2] +" kg" ;
+	document.getElementById('can2-6').innerHTML="Spring balance reading = "+values[x][lnt][4] +" kg" ;
+	document.getElementById('can2-7').innerHTML="Torque = "+values[x][lnt][5] +" N-m" ;
 	
 	document.getElementById('nextButton').style.visibility="visible";
 	}, 3000);
@@ -247,6 +268,8 @@ function step2()
 }
 function step2andhalf()
 {
+	//document.getElementById('can2-10').innerHTML="x = "+x;
+	//document.getElementById('can2-11').innerHTML="y = "+y[x].text ;
 	myStopFunction();
 	document.getElementById("can2-8").style.transformOrigin = "20% 75%";
 	document.getElementById("can2-8").style.animation = "springreading 0.9s forwards ";
@@ -257,9 +280,9 @@ function step2andhalf()
 		document.getElementById("can2-4").style.animation = "springreading 0.9s forwards ";
 	}, 700);
 	setTimeout(function(){
-	document.getElementById('can2-5').innerHTML="Dead weight of the pan ="+values[lnt][3] +" kg" ;
-	document.getElementById('can2-6').innerHTML="Spring balance reading = "+values[lnt][4] +" kg" ;
-	document.getElementById('can2-7').innerHTML="Torque = "+values[lnt][5] +" N-m" ;
+	document.getElementById('can2-5').innerHTML="Dead weight of the pan ="+values[x][lnt][2] +" kg" ;
+	document.getElementById('can2-6').innerHTML="Spring balance reading = "+values[x][lnt][4] +" kg" ;
+	document.getElementById('can2-7').innerHTML="Torque = "+values[x][lnt][5] +" N-m" ;
 	document.getElementById('nextButton').style.visibility="visible";
 	}, 3000);
 		
@@ -273,7 +296,7 @@ function step3()
 	document.getElementById("can3-3").style.transformOrigin = "33% 35%";
 	document.getElementById("can3-3").style.animation = "spring 2s forwards ";
 	setTimeout(function(){
-	document.getElementById('can3-4').innerHTML="Speed of motor = 500 rpm" ;
+	document.getElementById('can3-4').innerHTML="Speed of motor = "+y[x].text +" rpm" ;
 	document.getElementById('nextButton').style.visibility="visible";
 	}, 2000);
 }
@@ -287,9 +310,9 @@ function step4()
 	
 	}, 1000);
 	setTimeout(function(){
-	document.getElementById('can4-4').innerHTML="Delivery pressure = "+values[lnt][0] +" kg/cm<sup>2</sup> " ;
-	document.getElementById('can4-5').innerHTML="Delivery head = "+values[lnt][1] +" m" ;
-	document.getElementById('can4-6').innerHTML="Total head, H + z = "+values[lnt][2] +" m" ;
+	document.getElementById('can4-4').innerHTML="Delivery pressure = "+values[x][lnt][0] +" kg/cm<sup>2</sup> " ;
+	document.getElementById('can4-5').innerHTML="Delivery head = "+values[x][lnt][1] +" m" ;
+	document.getElementById('can4-6').innerHTML="Total head, H + z = "+values[x][lnt][3] +" m" ;
 	document.getElementById('nextButton').style.visibility="visible";	},3000);
 }
 
@@ -316,9 +339,9 @@ function step5quarter()
 {
 	setTimeout(function(){
 	
-	document.getElementById('can5-10').innerHTML="Final reading = "+values[lnt][7] +" cm" ;
-	document.getElementById('can5-11').innerHTML="Head of water = "+values[lnt][8] + " cm";
-	document.getElementById('can5-12').innerHTML="Actual discharge, Q<sub>act</sub> ="+ values[lnt][9] + " m<sup>3</sup>/sec";
+	document.getElementById('can5-10').innerHTML="Final reading = "+values[x][lnt][7] +" cm" ;
+	document.getElementById('can5-11').innerHTML="Head of water = "+values[x][lnt][8] + " cm";
+	document.getElementById('can5-12').innerHTML="Actual discharge, Q<sub>act</sub> ="+ values[x][lnt][9] + " m<sup>3</sup>/sec";
 	setTimeout(function(){
 	document.getElementById('nextButton').style.visibility="visible";
 	}, 500);
@@ -332,15 +355,193 @@ function step5quarter()
 function step6()
 {
 	setTimeout(function(){
-	document.getElementById('can6-5').innerHTML="Input power = "+values[lnt][10] +" watt" ;
-	document.getElementById('can6-6').innerHTML="Output power = "+values[lnt][11] +" watt" ;
-	document.getElementById('can6-7').innerHTML="Efficiency = "+values[lnt][12] +" %" ;
-	//document.getElementById('can6-8').innerHTML="Unit power = "+values[lnt][11] +" watt" ;
-	//document.getElementById('can6-9').innerHTML="Unit speed = "+values[lnt][12] +" rpm" ;
-	//document.getElementById('can6-10').innerHTML="Unit discharge = 0.82x10<sup>-3</sup> m<sup>3</sup>/sec";
+	document.getElementById('can6-5').innerHTML="Input power = "+values[x][lnt][10] +" watt" ;
+	document.getElementById('can6-6').innerHTML="Output power = "+values[x][lnt][11] +" watt" ;
+	document.getElementById('can6-7').innerHTML="Efficiency = "+values[x][lnt][12] +" %" ;
+	
 	document.getElementById('nextButton').style.visibility="visible";
 	lnt+=1;
 	}, 500);
+}
+
+
+function step_7a()
+{
+	$("#chartContainer").ejChart(
+        {
+		    //Initializing Primary X Axis	
+		    primaryXAxis:
+            {
+			    labelFormat: "{value}",
+                title: { text: 'Output Power' },
+                range: { min: 0, max: 500, interval: 50 }
+            },	
+			
+			//Initializing Primary Y Axis	
+            primaryYAxis:
+            {
+                labelFormat: "{value}",
+                title: { text: 'Efficiency' },
+                range: { min: 0, max: 70, interval: 10 }
+            },	
+			
+			//Initializing Common Properties for all the series
+           
+            //Initializing Series				
+            series: 
+			[
+			    {
+                points: [
+				{ x: values[x][0][11], y: values[x][0][12]},
+				{ x: values[x][1][11], y: values[x][1][12]},
+				{ x: values[x][2][11], y: values[x][2][12]},
+				{ x: values[x][3][11], y: values[x][3][12]},
+				{ x: values[x][4][11], y: values[x][4][12]},
+				{ x: values[x][5][11], y: values[x][5][12]},
+				{ x: values[x][6][11], y: values[x][6][12]},
+				{ x: values[x][7][11], y: values[x][7][12]}
+				
+				],
+				type: 'line',
+					fill: "#0066FF",
+					border :{width:5},
+					tooltip:{visible:true},
+					marker:{
+                        shape: 'circle',
+						size:
+                        {
+                            height: 5, width: 5
+                        },
+                        visible: true
+                    },					
+					enableAnimation :true
+                }
+			],
+             load:"loadTheme",
+			isResponsive: true,
+			
+			legend:{visible:false}
+        });
+	
+}
+function step_7b()
+{
+	$("#chartContainer").ejChart(
+        {
+		    //Initializing Primary X Axis	
+		    primaryXAxis:
+            {
+			    labelFormat: "{value}",
+                title: { text: 'Actual Discharge' },
+                range: { min: 0.00050, max: 0.00450, interval: 0.00050 }
+            },	
+			
+			//Initializing Primary Y Axis	
+            primaryYAxis:
+            {
+                labelFormat: "{value}",
+                title: { text: 'Efficiency' },
+                range: { min: 0, max: 70, interval: 10 }
+            },	
+			
+			//Initializing Common Properties for all the series
+           
+            //Initializing Series				
+            series: 
+			[
+			    {
+                points: [
+				{ x: values[x][0][9], y: values[x][0][12]},
+				{ x: values[x][1][9], y: values[x][1][12]},
+				{ x: values[x][2][9], y: values[x][2][12]},
+				{ x: values[x][3][9], y: values[x][3][12]},
+				{ x: values[x][4][9], y: values[x][4][12]},
+				{ x: values[x][5][9], y: values[x][5][12]},
+				{ x: values[x][6][9], y: values[x][6][12]},
+				{ x: values[x][7][9], y: values[x][7][12]}
+				
+				],
+				type: 'line',
+					fill: "#0066FF",
+					border :{width:5},
+					tooltip:{visible:true},
+					marker:{
+                        shape: 'circle',
+						size:
+                        {
+                            height: 5, width: 5
+                        },
+                        visible: true
+                    },					
+					enableAnimation :true
+                }
+			],
+             load:"loadTheme",
+			isResponsive: true,
+			
+			legend:{visible:false}
+        });
+	
+}
+function step_7c()
+{
+	$("#chartContainer").ejChart(
+        {
+		    //Initializing Primary X Axis	
+		    primaryXAxis:
+            {
+			    labelFormat: "{value}",
+                title: { text: 'Output Power' },
+                range: { min: 0, max: 500, interval: 50 }
+            },	
+			
+			//Initializing Primary Y Axis	
+            primaryYAxis:
+            {
+                labelFormat: "{value}",
+                title: { text: 'Actual Discharge' },
+                range: { min: 0.00050, max: 0.00450, interval: 0.00050 }
+            },	
+			
+			//Initializing Common Properties for all the series
+           
+            //Initializing Series				
+            series: 
+			[
+			    {
+                points: [
+				{ x: values[x][0][11], y: values[x][0][9]},
+				{ x: values[x][1][11], y: values[x][1][9]},
+				{ x: values[x][2][11], y: values[x][2][9]},
+				{ x: values[x][3][11], y: values[x][3][9]},
+				{ x: values[x][4][11], y: values[x][4][9]},
+				{ x: values[x][5][11], y: values[x][5][9]},
+				{ x: values[x][6][11], y: values[x][6][9]},
+				{ x: values[x][7][11], y: values[x][7][9]}
+				
+				],
+				type: 'line',
+					fill: "#0066FF",
+					border :{width:5},
+					tooltip:{visible:true},
+					marker:{
+                        shape: 'circle',
+						size:
+                        {
+                            height: 5, width: 5
+                        },
+                        visible: true
+                    },					
+					enableAnimation :true
+                }
+			],
+             load:"loadTheme",
+			isResponsive: true,
+			
+			legend:{visible:false}
+        });
+
+	
 }
 
 
@@ -363,14 +564,20 @@ function stepstop()
 
 function refresh1()
 {
+	document.getElementById("can1-select").selectedIndex = 0;
+	
 	document.getElementById("can2-3").style.animation = "";
 	document.getElementById("can2-4").style.transformOrigin = "";
 	document.getElementById("can2-4").style.animation = "";
-	//document.getElementById('can2-5').innerHTML="Weight on the pan =";
+	
 	document.getElementById('can2-6').innerHTML="Spring balance reading = ";
 	document.getElementById('can2-7').innerHTML="Torque = ";
 	document.getElementById("can2-8").style.transformOrigin = "";
 	document.getElementById("can2-8").style.animation = "";
+	
+	//document.getElementById('can2-10').innerHTML="x = ";
+	//document.getElementById('can2-11').innerHTML="y = ";
+	
 	
 	document.getElementById("can3-3").style.transformOrigin = "";
 	document.getElementById("can3-3").style.animation = "";

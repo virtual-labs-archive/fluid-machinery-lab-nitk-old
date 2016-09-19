@@ -47,7 +47,7 @@ var quizJSON = {
                 {"option": "Resultant force and tangential force",          "correct": false} // no comma here
             ],
              "correct": "<p><span>Right answer</span></p>",
-            "incorrect": "<p><span>wrong</span> It's wrong,<br>Ans: 60 to 300</p>" // no comma here
+            "incorrect": "<p><span>wrong</span> It's wrong,<br>Ans: Lift and resultant force</p>" // no comma here
         },
          
 		{ // Question 4 - Multiple Choice, Multiple True Answers, Select Any

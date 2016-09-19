@@ -36,7 +36,7 @@ var quizJSON = {
             ],
            
             "correct": "<p><span>Right answer</span> </p>",
-            "incorrect": "<p><span>wrong</span> It's wrong,<br>Ans: More than atmospheric pressure to vacuum</p>" // no comma here
+            "incorrect": "<p><span>wrong</span> It's wrong,<br>Ans: Backward facing vanes</p>" // no comma here
         },
         { // Question 3 - Multiple Choice, Multiple True Answers, Select All
             "q": "The efficiency of a pump is generally less than that of a turbine.(Say true or false)",

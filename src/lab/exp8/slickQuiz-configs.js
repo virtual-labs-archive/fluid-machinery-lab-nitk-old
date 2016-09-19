@@ -35,7 +35,7 @@ var quizJSON = {
             ],
            
             "correct": "<p><span>Right answer</span> </p>",
-            "incorrect": "<p><span>wrong</span> It's wrong,<br>Ans: More than atmospheric pressure to vacuum</p>" // no comma here
+            "incorrect": "<p><span>wrong</span> It's wrong,<br>Ans: False</p>" // no comma here
         },
         { // Question 3 - Multiple Choice, Multiple True Answers, Select All
             "q": "Slip of a reciprocating pump is defined as the",

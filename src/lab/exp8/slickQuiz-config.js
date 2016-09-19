@@ -60,7 +60,7 @@ var quizJSON = {
         }
 		,
         { // Question 5 - Multiple Choice, Multiple True Answers, Select All
-            "q": "5.	The relation between hydraulic efficiency &#8319;<sub>h</sub>, mechanical efficiency &#8319;<sub>m</sub> and overall efficiency &#8319;<sub>o</sub>is",
+            "q": "The relation between hydraulic efficiency &#8319;<sub>h</sub>, mechanical efficiency &#8319;<sub>m</sub> and overall efficiency &#8319;<sub>o</sub>is",
  
             "a": [
                 {"option": "&#8319;<sub>h</sub> = &#8319;<sub>o</sub> X &#8319;<sub>m</sub>",           "correct": false},

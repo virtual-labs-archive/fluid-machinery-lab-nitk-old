@@ -27,15 +27,15 @@ var quizJSON = {
             "incorrect": "<p><span>wrong</span> It's wrong,</br> Ans: H<sup>3/2</sup>, H<sup>1/2</sup>, H<sup>1/2</sup></p>" // no comma here
         },
         { // Question 2 - Multiple Choice, Multiple True Answers, Select Any
-            "q": "Which of the following advantages is/are possessed by a Kaplan turbine over a Francis turbine?</br><ol><li>1. Low frictional losses.</li> <li>2. Part load efficiency is considerably high.</li> <li>3. More compact and smaller in size.</li></ol> Select the correct answer using the codes given below</br>",
+            "q": "Which of the following advantages is/are possessed by a Kaplan turbine over a Francis turbine?</br><ol><li>A. Low frictional losses.</li> <li>B. Part load efficiency is considerably high.</li> <li>C. More compact and smaller in size.</li></ol> Select the correct answer using the codes given below</br>",
             "a": [
-                {"option": "Only 1",	 "correct": false},
-				{"option": "Only 1 and 2",	 "correct": false},
-				{"option": "Only 2 and 3",	 "correct": false},				
-                {"option": "1, 2 and 3", 		"correct": true} // no comma here
+                {"option": "Only A",	 "correct": false},
+				{"option": "Only A and B",	 "correct": false},
+				{"option": "Only B and C",	 "correct": false},				
+                {"option": "A, B and C", 		"correct": true} // no comma here
             ],
             "correct": "<p><span>Right answer</span> </p>",
-            "incorrect": "<p><span>wrong</span> It's wrong,</br> Ans: 1, 2 and 3</p>" // no comma here
+            "incorrect": "<p><span>wrong</span> It's wrong,</br> Ans: A, B and C</p>" // no comma here
         },
         { // Question 3 - Multiple Choice, Multiple True Answers, Select All
             "q": "The diameter of the turbine runner varies as",
@@ -48,6 +48,30 @@ var quizJSON = {
             ],
              "correct": "<p><span>Right answer</span></p>",
             "incorrect": "<p><span>wrong</span> It's wrong,</br> Ans:  Square root of the head for given speed</p>" // no comma here
+        },
+		{ // Question 4 - Multiple Choice, Multiple True Answers, Select All
+            "q": "Which of the following advantages is/are possessed by a Kaplan turbine over a Francis turbine?</br><ol><li>A. Low frictional losses.</li><li>B.Part load efficiency is considerably high.</li><li>C.More compact and smaller in size.</li></ol>Select the correct answer using the codes given below",
+ 
+            "a": [
+                {"option": "Only A",           "correct": false},
+                {"option": "Only A and B ",              "correct": false},
+                {"option": "Only B and C ",  "correct": false},
+                {"option": "A, B and C",          "correct": true} // no comma here
+            ],
+             "correct": "<p><span>Right answer</span></p>",
+            "incorrect": "<p><span>wrong</span> It's wrong,</br> Ans:  A, B and C</p>" // no comma here
+        },
+		{ // Question 5 - Multiple Choice, Multiple True Answers, Select All
+            "q": "The cavitation in reaction turbines is avoided, to a great extent by",
+ 
+            "a": [
+                {"option": "Using stainless steel runner of the turbine",           "correct": false},
+                {"option": "Installing the turbine below the tail race level",              "correct": false},
+                {"option": "Providing highly polished blades to the runner",  "correct": false},
+                {"option": "All of the above",          "correct": true} // no comma here
+            ],
+             "correct": "<p><span>Right answer</span></p>",
+            "incorrect": "<p><span>wrong</span> It's wrong,</br> Ans:  All of the above</p>" // no comma here
         }
 		
 		
