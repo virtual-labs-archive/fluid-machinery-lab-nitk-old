@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+
+<title>SOLVE</title>
+<link rel="stylesheet" href="hydr.css" />
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>-->
+<script type="text/javascript" src= "jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src= "new1.js"></script>
+
+<script>
+var simsubscreennum=0;
+var temp=0;
+var lnt=0;
+var values=[[2.87,0.5,5,10,64,0.014,10,31,0.152,0.74,1.74,14.6,6.8],
+			[2.87,1,10,10,95,0.00947,10,30.5,0.154,2.48,3.48,20.2,15.3],
+			[2.87,1.5,15,10,123,0.00731,10,30,0.156,4.23,5.23,23.36,19.7],
+			[2.87,2,20,10,156,0.0058,10,30,0.156,5.97,6.97,24.97,22.01],
+			[2.87,2.5,25,10,170,0.0053,10,30,0.156,7.71,8.71,28.62,26.1],
+			[2.87,3,30,10,210,0.0043,10,29.5,0.159,9.45,10.45,27.52,25.5],]
+			
+var lnt=0;
+
+</script>
+</head>
+
+
+
+<body style="margin:0">
+<!--Simulation Screen start		-->
+<div id="simscreen">
+
+<!--Title of Simulation		-->
+<div id="title"><h3>HYDRAULIC RAM</h3></div>
+
+<!--SubScreen Home	-->	
+<div class="simsubscreen" id="canvas0">
+<h4 class="incanvas" >Objective</h4>
+<p class="incanvas" >To conduct the performance test on hydraulic ram.</p>
+<h4 class="incanvas" >Apparatus used:</h4>
+<p class="incanvas" >Hydraulic ram setup, useful water tank, waste water tank, stop watch, measuring scale etc.</p>
+<img id="" style="position: absolute; left: 80px; top: 125px;" src="Images/1.png"/>
+</div>
+
+
+
+
+<!--Step1	-->	
+
+<div class="simsubscreen" id="canvas1" style="visibility:hidden">
+<strong id="titlestep" class="incanvas">STEP </strong><span class="circlebg" id="stepnumber">&nbsp;1&nbsp;</span><p id="pumptext" class="steptext"> Start the pump by pressing the start button.</p>
+<img id="can1-1" style="position: absolute; left: 50px; top: 130px;" src="Images/1.1.png">
+<img id="can1-2" style="position: absolute; left: 600px; top: 125px;" src="Images/board.png">
+<img id="can1on" style="position: absolute; left: 635px; top: 160px;" src="Images/on.png">
+<img id="can1off" style="position: absolute; left: 635px; top: 185px;" src="Images/off.png">
+<img id="onarm" src="Images/hand.png" style="margin-left: -50px; margin-top: -50px; position: absolute; visibility: hidden; left: 689px; top: 215px;">
+
+</div>
+<!--Step2	-->	
+
+<div class="simsubscreen" id="canvas2" style="visibility:hidden">
+
+<strong id="titlestep" class="incanvas">STEP &nbsp;</strong><span class="circlebg" id="stepnumber">&nbsp;2&nbsp;</span><p id="pumptext-2" class="steptext">&nbsp;Open the inlet valve and allow the water to flow.</p>
+<img id="can2-1" style="position: absolute; left: 50px; top: 130px;" src="Images/1.1.png">
+<img id="can2-2" style="position: absolute; left: 535px; top: 160px;" src="Images/delivery_valve.png">
+<img id="can2-3" style="position: absolute; left: 575px; top: 235px;" src="Images/valvearm.png">
+<img id="can2-5" style="position: absolute; left: 83px; top: 170px;cursor:crosshair;" src="Images/nob-hyd.png">
+
+
+<p id="can2-4" style="position:absolute;top: 400px; left:370px"> Supply head =   </p>
+
+</div>
+
+<!--Step3	-->	
+<div class="simsubscreen" id="canvas3" style="visibility:hidden">
+<strong class="incanvas">STEP &nbsp;</strong><span class="circlebg">&nbsp;3&nbsp;</span><p class="steptext">&nbsp;Open the delivery valve and find the delivery pressure.</p>
+<img id="can3-1" style="position: absolute; left: 10px; top: 130px;" src="Images/1.1.png">
+<img id="can3-2" style="position: absolute; left: 335px; top: 160px;" src="Images/Inlet valve_horizontal_1.png">
+<img id="can3-3" style="position: absolute; left: 330px; top: 196px;" src="Images/Inlet valve_horizontal.png">
+<img id="can3-4" style="position: absolute; left: 530px; top: 125px;" src="Images/supply head.png">
+<img id="can3-5" style="position: absolute; left: 585px; top: 198px;" src="Images/arrow.png">
+<img id="can3-8" style="position: absolute; left: 125px; top: 244px;cursor:crosshair;" src="Images/nob-hyd_2.png">
+
+<p id="can3-6" style="position:absolute;top: 400px; left:370px"> Delivery pressure =  </p>
+<p id="can3-7" style="position:absolute;top: 430px; left:370px"> Delivery head =  </p>
+
+</div>
+
+<!--Step4	-->	
+<div class="simsubscreen" id="canvas4" style="visibility:hidden">
+<strong class="incanvas">STEP &nbsp;</strong><span class="circlebg">&nbsp;4&nbsp;</span><p class="steptext-2">&nbsp;Determine the waste water discharge by noting the time required by water to fill the collecting tank upto 10cm height.</p>
+<img id="can4-1" style="position: absolute; left: 50px; top: 130px;" src="Images/1.1.png">
+<img id="can4-2" style="position: absolute; left: 535px; top: 160px;" src="Images/stopwatch.1.png">
+<img id="can4-3" style="position: absolute; left: 603px; top: 230px;" src="Images/stopwatch_needle.png">
+
+<img id="can4-7" style="position: absolute; left: 403px; top: 365px;" src="Images/wtrblu.png">
+<img id="can4-8" style="position: absolute; left: 403px; top: 380px;" src="Images/wtrblank.png">
+
+<img id="can4-4" style="position: absolute; left: 403px; top: 95px;" src="Images/measuring tube.png">
+
+<p id="can4-5" style="position:absolute;top: 400px; left:370px"> Time required by water to fill 10cm height =  </p>
+<p id="can4-6" style="position:absolute;top: 430px; left:370px"> Discharge of waste water =  </p>
+</div>
+
+
+<!--Step5	-->	
+<div class="simsubscreen" id="canvas5" style="visibility:hidden">
+<strong class="incanvas">STEP &nbsp;</strong><span class="circlebg">&nbsp;5&nbsp;</span><p class="steptext">&nbsp;Determine the useful water discharge by calculating the time required by water to collect upto 10cm in the collecting tank.</p>
+<img id="can5-1" style="position: absolute; left: 50px; top: 130px;" src="Images/1.1.png">
+<img id="can5-2" style="position: absolute; left: 535px; top: 160px;" src="Images/stopwatch.1.png">
+<img id="can5-3" style="position: absolute; left: 603px; top: 230px;" src="Images/stopwatch_needle.png">
+
+<img id="can5-7" style="position: absolute; left: 403px; top: 365px;" src="Images/wtrblu.png">
+<img id="can5-8" style="position: absolute; left: 403px; top: 380px;" src="Images/wtrblank.png">
+
+<img id="can5-4" style="position: absolute; left: 403px; top: 95px;" src="Images/measuring tube.png">
+
+<p id="can5-5" style="position:absolute;top: 400px; left:370px"> Time required by water to fill 10cm height =  </p>
+<p id="can5-6" style="position:absolute;top: 430px; left:370px"> Discharge of useful water =  </p>
+
+</div>
+
+<!--Step6	-->	
+<div class="simsubscreen" id="canvas6" style="visibility:hidden">
+<strong class="incanvas" style="position:absolute;top: 30px; left:50px"><h2>Observation</h2></strong>
+<p id="can6-1" style="position:absolute;top: 80px; left:220px"> Dimension of useful watertank : Length = 30 cm</p>
+<p id="can6-2" style="position: absolute; top: 110px; left: 410px;"> Breadth = 30 cm </p>
+<p id="can6-3" style="position:absolute;top: 170px; left:220px"> Dimension of waste watertank : Length = 77 cm</p>
+<p id="can6-4" style="position: absolute; top: 200px; left: 410px;"> Breadth = 61 cm</p>
+
+<strong class="incanvas" style="position:absolute;top: 250px; left:50px"><h2>Result</h2></strong>
+
+<p id="can6-5" style="position:absolute;top: 300px; left:220px"> D'Aubuissons efficiency =  </p>
+<p id="can6-6" style="position:absolute;top: 330px; left:220px"> Rankine's efficiency =  </p>
+<p id="can6-7" style="position:absolute;top: 360px; left:220px"> Lift to fall ratio [(H<sub>d</sub> - H<sub>s</sub> ) / H<sub>s</sub>] =  </p>
+<p id="can6-8" style="position:absolute;top: 390px; left:220px"> Lift to fall ratio (H<sub>d</sub> / H<sub>s</sub>)=  </p>
+
+</div>
+
+<!--Step7	-->	
+<div class="simsubscreen" id="canvas7" style="visibility:hidden">
+<strong class="incanvas" ><h2>Characteristic Curves</h2></strong>
+<span id="step7text1" style="border: 2px solid; position:absolute;top: 90px; left:40px;cursor:pointer" onclick=" document.getElementById('graph').src='Images/G_1.png'" >&nbsp;&nbsp;Rankine's Efficiency vs Lift to Fall Ratio&nbsp;&nbsp;</span>
+<span id="step7text2" style="border: 2px solid; position:absolute;top: 90px; left:370px;cursor:pointer" onclick=" document.getElementById('graph').src='Images/G_2.png'">&nbsp;&nbsp;D'Abuissons vs  Efficiency vs Lift to Fall Ratio&nbsp;&nbsp;</span>
+<img id="graph" style="position:absolute; top:200px; left:100px" src="Images/G_1.png" />
+</div>
+
+	
+<!--next  Arrow	-->	
+<div id="nav">
+	<img id="nextButton" onclick="navNext(); " src="Images/Next.png" />
+</div>
+
+<!--Trial text	-->
+<div id="">	
+<p id="trial" style="text-transform: uppercase;visibility :hidden;font-weight: bold;"><strong>Trial = </strong></p>
+</div>
+
+<!--Blinking Arrow	-->	
+<img class ="" id="arrow1" style="visibility:hidden" src="Images/arrow1.png"/>
+
+<div id="copyright"> &copy; 2015 SOLVE - The Virtual Lab @ NITK Surathkal, Department of Applied Mechanics & Hydraulics</div>
+</body>
+</html>
