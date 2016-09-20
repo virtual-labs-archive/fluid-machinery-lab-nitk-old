@@ -189,7 +189,7 @@ function magic()
 			mpointer=0;
 			simsubscreennum=0;
 		}
-		else if (repeat <=5)
+		else if (repeat < 6)
 		{
 			
 				
@@ -204,7 +204,8 @@ function magic()
 	}
 	else (simsubscreennum==7)
 	{
-		
+		document.getElementById('step7text1').onclick=function() { step_7a();}
+		document.getElementById('step7text2').onclick=function() { step_7b();}
 	}
 	
 }
@@ -351,7 +352,121 @@ function step6()
 }
 
 
+function step_7a()
+{
+	$("#chartContainer").ejChart(
+        {
+		    //Initializing Primary X Axis	
+		    primaryXAxis:
+            {
+			   labelFormat: "{value}",
+                title: { text: 'Lift to Fall Ratio' },
+                range: { min: 0, max: 10, interval: 1 } 
+            },	
+			
+			//Initializing Primary Y Axis	
+            primaryYAxis:
+            {
+                labelFormat: "{value}",
+                title: { text: 'Rankines Efficiency' },
+                range: { min: 0, max: 30, interval: 5 }
+            },	
+			
+			//Initializing Common Properties for all the series
+           
+            //Initializing Series				
+            series: 
+			[
+			    {
+                points: [
+				{ x: values[0][9], y: values[0][12]},
+				{ x: values[1][9], y: values[1][12]},
+				{ x: values[2][9], y: values[2][12]},
+				{ x: values[3][9], y: values[3][12]},
+				{ x: values[4][9], y: values[4][12]},
+				{ x: values[5][9], y: values[5][12]}
+				
+				
+				],
+				type: 'line',
+					fill: "#0066FF",
+					border :{width:5},
+					tooltip:{visible:true},
+					marker:{
+                        shape: 'circle',
+						size:
+                        {
+                            height: 5, width: 5
+                        },
+                        visible: true
+                    },					
+					enableAnimation :true
+                }
+			],
+             load:"loadTheme",
+			isResponsive: true,
+			
+			legend:{visible:false}
+        });
+}
 
+function step_7b()
+{
+	$("#chartContainer").ejChart(
+        {
+		    //Initializing Primary X Axis	
+		    primaryXAxis:
+            {
+			   labelFormat: "{value}",
+                title: { text: 'Lift to Fall Ratio' },
+                range: { min: 0, max: 20, interval: 5 } 
+            },	
+			
+			//Initializing Primary Y Axis	
+            primaryYAxis:
+            {
+                labelFormat: "{value}",
+                title: { text: 'DAbuissons Efficiency' },
+                range: { min: 10, max: 30, interval: 5 }
+            },	
+			
+			//Initializing Common Properties for all the series
+           
+            //Initializing Series				
+            series: 
+			[
+			    {
+                points: [
+				{ x: values[0][10], y: values[0][11]},
+				{ x: values[1][10], y: values[1][11]},
+				{ x: values[2][10], y: values[2][11]},
+				{ x: values[3][10], y: values[3][11]},
+				{ x: values[4][10], y: values[4][11]},
+				{ x: values[5][10], y: values[5][11]}
+				
+				
+				],
+				type: 'line',
+					fill: "#0066FF",
+					border :{width:5},
+					tooltip:{visible:true},
+					marker:{
+                        shape: 'circle',
+						size:
+                        {
+                            height: 5, width: 5
+                        },
+                        visible: true
+                    },					
+					enableAnimation :true
+                }
+			],
+             load:"loadTheme",
+			isResponsive: true,
+			
+			legend:{visible:false}
+        });
+}
 
 
 
